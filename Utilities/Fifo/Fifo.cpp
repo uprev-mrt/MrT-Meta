@@ -6,7 +6,7 @@
 */
 
 #include <stdlib.h>
-#include "fifo.h"
+#include "Fifo.h"
 
 
 #ifndef URB_MUTEX_LOCK
