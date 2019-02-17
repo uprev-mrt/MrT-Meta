@@ -43,7 +43,7 @@ int Fifo::push( void* data)
     if (next == mTail) // check if circular buffer is full
     {
 		URB_MUTEX_UNLOCK;
-        return -1;
+        return FIFO_OVERFLOW;
     }
 
     mCount++;
@@ -66,7 +66,7 @@ int Fifo::pop( void *data)
     if (mHead == mTail) // check if circular buffer is empty
     {
 		URB_MUTEX_UNLOCK;
-        return -1;          // and return with an error
+        return FIFO_UNDERFLOW;          // and return with an error
     }
 
     // next is where tail will point to after this read.
@@ -128,7 +128,7 @@ int Fifo::peek( void* data, int idx)
   if(mCount <= idx)
   {
         URB_MUTEX_UNLOCK;
-        return -1;
+        return FIFO_UNDERFLOW;
   }
 
   int addr = mTail + idx; //

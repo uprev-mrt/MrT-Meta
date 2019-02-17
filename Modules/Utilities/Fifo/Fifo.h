@@ -9,7 +9,9 @@
 #include <string.h>
 #include <stdint.h>
 
-
+#define FIFO_OK 0
+#define FIFO_OVERFLOW -1
+#define FIFO_UNDERFLOW -2
 /**
  *@brief creates fifo
  *@param x : name of fifo buffer
