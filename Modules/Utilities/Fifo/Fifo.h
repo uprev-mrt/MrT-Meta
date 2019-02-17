@@ -56,8 +56,8 @@ class Fifo : public fifo_t
 
     int Count() const {return mCount;}
   private:
-#ifdef URB_MUTEX_TYPE
-    URB_MUTEXT_TYPE mMutex;
+#ifdef MRT_MUTEX_TYPE
+    MRT_MUTEXT_TYPE mMutex;
 #endif
 
 };
@@ -66,7 +66,7 @@ extern "C"
 {
 #endif
 
-void fifo_init(fifo_t* c, int objSize, int len);
+fifo_t* new_fifo( int objSize, int len);
 void fifo_destroy(fifo_t* c);
 int fifo_push(fifo_t *c, void* data);
 int fifo_pop(fifo_t *c, void* data);

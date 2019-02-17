@@ -9,9 +9,9 @@
 #include "Fifo.h"
 
 
-#ifndef URB_MUTEX_LOCK
-  #define URB_MUTEX_LOCK mLock =1//while(mLock){delay_ms(1);} mLock = 1
-  #define URB_MUTEX_UNLOCK mLock = 0
+#ifndef MRT_MUTEX_LOCK
+  #define MRT_MUTEX_LOCK mLock =1//while(mLock){delay_ms(1);} mLock = 1
+  #define MRT_MUTEX_UNLOCK mLock = 0
 #endif
 
 Fifo::Fifo(int objSize, int len)
@@ -31,7 +31,7 @@ Fifo::~Fifo()
 
 int Fifo::push( void* data)
 {
-	URB_MUTEX_LOCK;
+	MRT_MUTEX_LOCK;
 
     // next is where head will point to after this write.
     int next = mHead + 1;
@@ -42,7 +42,7 @@ int Fifo::push( void* data)
     }
     if (next == mTail) // check if circular buffer is full
     {
-		URB_MUTEX_UNLOCK;
+		MRT_MUTEX_UNLOCK;
         return FIFO_OVERFLOW;
     }
 
@@ -54,18 +54,18 @@ int Fifo::push( void* data)
 
     mHead = next;            // head to next data offset.
 
-    URB_MUTEX_UNLOCK;
+    MRT_MUTEX_UNLOCK;
 
     return 0;  // return success to indicate successful push.
 }
 
 int Fifo::pop( void *data)
 {
-	URB_MUTEX_LOCK;
+	MRT_MUTEX_LOCK;
     // if the head isn't ahead of the tail, we don't have any characters
     if (mHead == mTail) // check if circular buffer is empty
     {
-		URB_MUTEX_UNLOCK;
+		MRT_MUTEX_UNLOCK;
         return FIFO_UNDERFLOW;          // and return with an error
     }
 
@@ -83,7 +83,7 @@ int Fifo::pop( void *data)
     {
         mCount--;
     }
-    URB_MUTEX_UNLOCK;
+    MRT_MUTEX_UNLOCK;
 
     return 0;  // return success to indicate successful push.
 }
@@ -124,10 +124,10 @@ int Fifo::clear()
 
 int Fifo::peek( void* data, int idx)
 {
-  URB_MUTEX_LOCK;
+  MRT_MUTEX_LOCK;
   if(mCount <= idx)
   {
-        URB_MUTEX_UNLOCK;
+        MRT_MUTEX_UNLOCK;
         return FIFO_UNDERFLOW;
   }
 
@@ -140,7 +140,7 @@ int Fifo::peek( void* data, int idx)
   }
 
   memcpy(data,&mBuffer[addr* mObjSize],mObjSize);
-  URB_MUTEX_UNLOCK;
+  MRT_MUTEX_UNLOCK;
   return 0;  // return success to indicate successful push.
 }
 
