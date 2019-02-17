@@ -62,18 +62,21 @@ class Fifo : public fifo_t
 
 };
 
+
+
 extern "C"
 {
 #endif
 
+
 fifo_t* new_fifo( int objSize, int len);
-void fifo_destroy(fifo_t* c);
-int fifo_push(fifo_t *c, void* data);
-int fifo_pop(fifo_t *c, void* data);
-int fifo_push_buf(fifo_t *c, void* data, int len);
-int fifo_pop_buf(fifo_t *c, void* data, int len);
-int fifo_clear(fifo_t *c);
-int fifo_peek(fifo_t *c, void* data, int idx);
+void fifo_destroy(fifo_t* pFifo);
+int fifo_push(fifo_t* pFifo, void* data);
+int fifo_pop(fifo_t* pFifo, void* data);
+int fifo_push_buf(fifo_t* c, void* data, int len);
+int fifo_pop_buf(fifo_t* c, void* data, int len);
+int fifo_clear(fifo_t* c);
+int fifo_peek(fifo_t* c, void* data, int idx);
 
 #ifdef __cplusplus
 }

@@ -146,7 +146,7 @@ int Fifo::peek( void* data, int idx)
 
 extern "C"{
 
-fifo_t* new_fifo(fifo_t* pFifo, int objSize, int len)
+fifo_t* new_fifo( int objSize, int len)
 {
   Fifo* p = new Fifo(objSize, len);
   return (Fifo*)p;
@@ -186,5 +186,6 @@ int fifo_peek(fifo_t* pFifo, void* data, int idx)
 {
   return static_cast<Fifo*>(pFifo)->peek(data, idx);
 }
+
 
 }
