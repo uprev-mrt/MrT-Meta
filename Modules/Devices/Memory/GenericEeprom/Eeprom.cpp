@@ -5,9 +5,9 @@
 #define DELAY_TIME 2
 
 
-Eeprom::Eeprom(void* mod, uint8_t addr, uint64_t size,uint32_t pageSize );
+Eeprom::Eeprom(mrt_i2c_handle_t handle, uint8_t addr, uint64_t size,uint32_t pageSize );
 {
-	mMod = mod;
+	mHandle = handle;
 	mAddr = addr;
 	mSize = size;
 	mPageSize = size;
@@ -32,7 +32,7 @@ void Eeprom::write(uint16_t address, uint8_t * data, int len)
 			chunkSize = pageEnd - address;
 		}
 
-		MRT_I2C_MEM_WRITE(mMod, mAddr, address, 2, data[idx], chunkSize, 500 );
+		MRT_I2C_MEM_WRITE(mHandle, mAddr, address, 2, &data[idx], chunkSize, 500 );
 		MRT_DELAY_MS(DELAY_TIME);
 
 		idx+= chunkSize;
@@ -60,7 +60,7 @@ void Eeprom::read(uint16_t address, uint8_t * data, int len)
 			chunkSize = pageEnd - address;
 		}
 
-		MRT_I2C_MEM_READ(mMod, mAddr, address, 2, data[idx], chunkSize, 500 );
+		MRT_I2C_MEM_READ(mHandle, mAddr, address, 2, &data[idx], chunkSize, 500 );
 		MRT_DELAY_MS(DELAY_TIME);
 
 		idx+= chunkSize;
@@ -73,9 +73,9 @@ void Eeprom::read(uint16_t address, uint8_t * data, int len)
 
 extern "C"{
 
-	eeprom_t* new_eeprom(void* mod, uint8_t addr, uint64_t size,uint32_t pageSize )
+	eeprom_t* new_eeprom(mrt_i2c_handle_t handle, uint8_t addr, uint64_t size,uint32_t pageSize )
 	{
-		Eeprom* p = new Eeprom(mod,addr,size,pageSize);
+		Eeprom* p = new Eeprom(handle,addr,size,pageSize);
 	  return (Eeprom*)p;
 	}
 

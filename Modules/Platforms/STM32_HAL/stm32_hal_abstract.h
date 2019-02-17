@@ -29,21 +29,30 @@
 #define MRT_DELAY_MS(ms) HAL_DELAY(ms)
 
 //Uart Abstraction
-#define MRT_UART_TX(mod, data, len, timeout)
-#define MRT_UART_RX(mod, data, len, timeout)
-#define MRT_UART_AVAILABLE(mod) 
+#define MRT_UART_TX(handle, data, len, timeout)
+#define MRT_UART_RX(handle, data, len, timeout)
+#define MRT_UART_AVAILABLE(mod)
 
 //GPIO Abstraction
-#define MRT_GPIO_WRITE(pin,val) HAL_GPIO_WritePin(pin##_GPIO_Port, pin##_Pin, val)
-#define MRT_GPIO_READ(pin,val) HAL_GPIO_ReadPin(pin##_GPIO_Port, pin##_Pin)
+typedef struct{
+  GPIO_TypeDef* port;
+	uint16_t pin;
+} mrt_gpio_t;
+#define MRT_GPIO_WRITE(pin,val) HAL_GPIO_WritePin(pin.port, pin.pin, val)
+#define MRT_GPIO_READ(pin,val) HAL_GPIO_ReadPin(pin.port, pin.pin)
 
 
 //I2C Abstraction
-#define MRT_I2C_MASTER_TRANSMIT(mod ,addr,data,len,stop, timeout) HAL_I2C_Master_Transmit((I2C_HandleTypeDef*)mod , addr, data, len, timeout)
-#define MRT_I2C_MASTER_RECEIVE(mod ,addr, data, len, stop, timeout) HAL_I2C_Master_Receive((I2C_HandleTypeDef*)mod , addr, data, len, timeout)
-#define MRT_I2C_MEM_WRITE(mod, addr, mem_addr, mem_size, data, len, timeout ) HAL_I2C_Mem_Write((I2C_HandleTypeDef*)mod ,addr, mem_addr, mem_size, data, len, timeout)
-#define MRT_I2C_MEM_READ(mod, addr, mem_addr, mem_size, data, len, timeout ) HAL_I2C_Mem_Read((I2C_HandleTypeDef*)mod ,addr, mem_addr, mem_size, data, len, timeout)
+typedef I2C_HandleTypeDef* mrt_i2c_handle_t;
+#define MRT_I2C_MASTER_TRANSMIT(handle ,addr,data,len,stop, timeout) HAL_I2C_Master_Transmit(handle , addr, data, len, timeout)
+#define MRT_I2C_MASTER_RECEIVE(handle ,addr, data, len, stop, timeout) HAL_I2C_Master_Receive(handle , addr, data, len, timeout)
+#define MRT_I2C_MEM_WRITE(handle, addr, mem_addr, mem_size, data, len, timeout ) HAL_I2C_Mem_Write(handle ,addr, mem_addr, mem_size, data, len, timeout)
+#define MRT_I2C_MEM_READ(handle, addr, mem_addr, mem_size, data, len, timeout ) HAL_I2C_Mem_Read(handle ,addr, mem_addr, mem_size, data, len, timeout)
 
 //SPI Abstraction
-#define MRT_SPI_TRANSFER(mod ,tx, rx ,len, timeout) stm32_spi_transfer((SPI_HandleTypeDef*)mod,tx,rx,len,timeout)
-int stm32_spi_transfer(int inst, uint8_t* tx, uint8_t* rx, int timeout);
+typedef SPI_HandleTypeDef* mrt_spi_handle_t;
+#define MRT_SPI_TRANSFER(handle ,tx, rx ,len, timeout) stm32_spi_transfer(handle,tx,rx,len,timeout)
+int stm32_spi_transfer(SPI_HandleTypeDef* handle, uint8_t* tx, uint8_t* rx, int timeout);
+
+//printf
+#define MRT_PRINTF(f_, ...) printf((f_), __VA_ARGS__)
