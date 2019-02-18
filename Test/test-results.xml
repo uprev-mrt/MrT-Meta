@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="9" failures="0" disabled="0" errors="0" timestamp="2019-02-17T11:58:14" time="0.005" name="AllTests">
+  <testsuite name="BlobTest" tests="1" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="test" status="run" time="0" classname="BlobTest" />
+  </testsuite>
+  <testsuite name="FifoTest" tests="4" failures="0" disabled="0" errors="0" time="0.002">
+    <testcase name="Push" status="run" time="0" classname="FifoTest" />
+    <testcase name="Overflow" status="run" time="0" classname="FifoTest" />
+    <testcase name="Pop" status="run" time="0" classname="FifoTest" />
+    <testcase name="Underflow" status="run" time="0" classname="FifoTest" />
+  </testsuite>
+  <testsuite name="FifoTest_c" tests="4" failures="0" disabled="0" errors="0" time="0.002">
+    <testcase name="Push_c" status="run" time="0" classname="FifoTest_c" />
+    <testcase name="Overflow_c" status="run" time="0" classname="FifoTest_c" />
+    <testcase name="Pop_c" status="run" time="0" classname="FifoTest_c" />
+    <testcase name="Underflow_c" status="run" time="0" classname="FifoTest_c" />
+  </testsuite>
+</testsuites>
