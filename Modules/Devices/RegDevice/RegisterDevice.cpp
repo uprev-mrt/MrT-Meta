@@ -1,4 +1,12 @@
+/**
+  *@file RegisterDevice.cpp
+  *@brief Base class for register based devices
+  *@author Jason Berger
+  *@date 02/17/2019
+  */
 
+namespace Devices
+{
 
 RegisterDevice::RegisterDevice()
 {
@@ -56,4 +64,5 @@ void regdev_print_register(regdev_t* pRegDev,register_def_t* reg)
   static_cast<RegisterDevice*>(pRegDev)->printRegister(reg);
 }
 
+}
 }

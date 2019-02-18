@@ -1,4 +1,4 @@
-/*! 
+/*!
    \@file Fifo.h
    \@brief header file for spi fifo buffer
    \@author Jason Berger
@@ -19,15 +19,15 @@
  *@param z : datatype
  *@return "Return of the function"
  */
-#define FIFO_DEF(x,y,z)          \
-  uint8_t x##_data[y*sizeof(z)];     \
-  fifo_t x = {               \
-        .mBuffer = x##_data,      \
-        .mHead = 0,                \
-        .mTail = 0,                \
-        .mMaxLen = y,              \
+#define FIFO_DEF(x,y,z)             \
+  uint8_t x##_data[y*sizeof(z)];    \
+  fifo_t x = {                      \
+        .mBuffer = x##_data,        \
+        .mHead = 0,                 \
+        .mTail = 0,                 \
+        .mMaxLen = y,               \
         .mCount = 0,                \
-        .mObjSize = sizeof(z)	 \
+        .mObjSize = sizeof(z)	      \
     };
 
 typedef struct {

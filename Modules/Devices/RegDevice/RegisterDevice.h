@@ -5,6 +5,10 @@
   *@date 02/16/2019
   */
 
+#ifdef __cplusplus
+namespace Devices
+{
+#ednif
 
 #define REG_PERM_R    0x01
 #define REG_PERM_W    0x02
@@ -54,5 +58,6 @@ void regdev_read_register(regdev_t* pRegDev,register_def_t* reg, uint8_t* data);
 void regdev_print_register(regdev_t* pRegDev,register_def_t* reg);
 
 #ifdef __cplusplus
+}
 }
 #endif

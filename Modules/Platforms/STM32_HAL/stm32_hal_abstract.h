@@ -26,7 +26,7 @@
 #define MRT_DELAY_MS(ms) HAL_DELAY(ms)
 
 //Uart Abstraction
-typedef UART_HandleTypeDef mrt_uart_handle_t;
+typedef UART_HandleTypeDef* mrt_uart_handle_t;
 #define MRT_UART_TX(handle, data, len, timeout) HAL_UART_Transmit(handle, data, len, timeout)
 #define MRT_UART_RX(handle, data, len, timeout) HAL_UART_Retrieve(handle, data, len, timeout)
 
