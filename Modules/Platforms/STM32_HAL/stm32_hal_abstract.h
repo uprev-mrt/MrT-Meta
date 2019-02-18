@@ -1,9 +1,10 @@
-/*
- * stm_abstract.h
- *
- *  Created on: Apr 6, 2018
- *      Author: Jason Berger
- */
+
+/**
+  *@file stm32_hal_abstract.h
+  *@brief Abstraction header for STM32 MCUs using the HAL framework
+  *@author Jason Berger
+  *@date 4/6/2018
+  */
 
 #pragma once
 
@@ -17,6 +18,8 @@
 
 #ifdef __cplusplus
  }
+ namespace Platforms
+ {
 #endif
 
 //Delay Abstraction
@@ -48,3 +51,7 @@ typedef SPI_HandleTypeDef* mrt_spi_handle_t;
 
 //printf
 #define MRT_PRINTF(f_, ...) printf((f_), __VA_ARGS__)
+
+#ifdef __cplusplus
+ }
+#endif

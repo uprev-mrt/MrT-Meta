@@ -1,4 +1,4 @@
-/*!
+/*! 
    \@file Fifo.h
    \@brief header file for spi fifo buffer
    \@author Jason Berger
@@ -42,9 +42,10 @@ typedef struct {
 
 #ifdef __cplusplus
 
-
+namespace Utilities
+{
 /**
-  *@brief First In First Out buffer 
+  *@brief First In First Out buffer
   */
 class Fifo : public fifo_t
 {
@@ -107,7 +108,6 @@ class Fifo : public fifo_t
 };
 
 
-
 extern "C"
 {
 #endif
@@ -123,5 +123,6 @@ int fifo_clear(fifo_t* c);
 int fifo_peek(fifo_t* c, void* data, int idx);
 
 #ifdef __cplusplus
+}
 }
 #endif

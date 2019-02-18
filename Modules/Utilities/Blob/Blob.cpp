@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include "Blob.h"
 
+namespace Utilities
+{
+
 Blob::Blob(uint32_t objSize, uint32_t count)
 {
   mObjSize = objSize;
@@ -46,4 +49,5 @@ void Blob::set(uint32_t idx, T val)
   {
     memcpy((void*)&mBuffer[mObjSize*idx], (void*)&val, sizeof(T));
   }
+}
 }

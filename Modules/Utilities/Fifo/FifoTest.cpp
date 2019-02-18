@@ -4,6 +4,7 @@
 #include "Fifo.cpp"
 #include <gtest/gtest.h>
 
+using namespace Utilities;
 
 int testSize = 64;
 Fifo testFifo(sizeof(int), 64);

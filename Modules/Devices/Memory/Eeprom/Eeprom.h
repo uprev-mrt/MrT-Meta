@@ -12,6 +12,9 @@ typedef struct {
 
 #ifdef __cplusplus
 
+namespace Devices
+{
+
 class Eeprom : public eeprom_t
 {
 	public:
@@ -36,5 +39,6 @@ void eeprom_read(eeprom_t * pEeprom, uint16_t address, uint8_t* data, uint8_t le
 void eeprom_write(eeprom_t * pEeprom, uint16_t address, uint8_t * data, uint8_t len);
 
 #ifdef __cplusplus
+}
 }
 #endif

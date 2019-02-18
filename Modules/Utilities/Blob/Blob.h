@@ -12,6 +12,9 @@
 
 #ifdef __cplusplus
 
+namespace Utilities
+{
+
 /**
   *@brief A Class that can contain various types of data
   */
@@ -36,5 +39,5 @@ class Blob
   private:
 };
 
-
+}
 #endif

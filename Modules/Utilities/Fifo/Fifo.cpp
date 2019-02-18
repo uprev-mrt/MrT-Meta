@@ -14,6 +14,9 @@
   #define MRT_MUTEX_UNLOCK mLock = 0
 #endif
 
+namespace Utilities
+{
+
 Fifo::Fifo(int objSize, int len)
 {
   mBuffer = (uint8_t*) malloc(objSize * len);
@@ -188,4 +191,5 @@ int fifo_peek(fifo_t* pFifo, void* data, int idx)
 }
 
 
+}
 }

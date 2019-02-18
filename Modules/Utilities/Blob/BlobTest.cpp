@@ -4,7 +4,7 @@
 #include "Blob.cpp"
 #include <gtest/gtest.h>
 
-
+using namespace Utilities;
 
 //Test pushing data to Fifo
 TEST(BlobTest, test)
