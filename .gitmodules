@@ -1,0 +1,3 @@
+[submodule "Modules/Utilities/Fifo"]
+	path = Modules/Utilities/Fifo
+	url = git@bitbucket.org:uprev/utility-fifo.git
