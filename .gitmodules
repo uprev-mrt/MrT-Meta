@@ -19,3 +19,6 @@
 [submodule "Modules/Utilities/PolyPacket"]
 	path = Modules/Utilities/PolyPacket
 	url = git@bitbucket.org:uprev/utility-polypacket.git
+[submodule "Modules/Devices/Displays/ErcMonoLcd"]
+	path = Modules/Devices/Displays/ErcMonoLcd
+	url = git@bitbucket.org:uprev/device-ercxxlcd.git
