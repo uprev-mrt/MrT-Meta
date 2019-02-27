@@ -6,7 +6,14 @@ include_directories(${GTEST_INCLUDE_DIRS})
 enable_testing()
 
 
-#include_directories("../Utilities/Fifo")
+include_directories("../Utilities/Blob")
+include_directories("../Utilities/Fifo")
+include_directories("../Utilities/PolyPacket")
+
+get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES)
+foreach(dir ${dirs})
+  message(STATUS "dir='${dir}'")
+endforeach()
 
 file(GLOB_RECURSE TEST_FILES "${CMAKE_CURRENT_SOURCE_DIR}/../*Test.cpp")
 
