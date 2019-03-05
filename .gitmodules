@@ -1,3 +1,9 @@
+[submodule "Tools"]
+	path = Tools
+	url = git@bitbucket.org:uprev/tools.git
+[submodule "Test"]
+	path = Test
+	url = git@bitbucket.org:uprev/test.git
 [submodule "Modules/Utilities/Fifo"]
 	path = Modules/Utilities/Fifo
 	url = git@bitbucket.org:uprev/utility-fifo.git
@@ -22,6 +28,3 @@
 [submodule "Modules/Devices/Displays/ErcMonoLcd"]
 	path = Modules/Devices/Displays/ErcMonoLcd
 	url = git@bitbucket.org:uprev/device-ercxxlcd.git
-[submodule "Tools"]
-	path = Tools
-	url = git@bitbucket.org:uprev/tools.git
