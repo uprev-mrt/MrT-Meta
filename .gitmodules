@@ -22,3 +22,6 @@
 [submodule "Modules/Devices/Displays/ErcMonoLcd"]
 	path = Modules/Devices/Displays/ErcMonoLcd
 	url = git@bitbucket.org:uprev/device-ercxxlcd.git
+[submodule "Tools"]
+	path = Tools
+	url = git@bitbucket.org:uprev/tools.git
