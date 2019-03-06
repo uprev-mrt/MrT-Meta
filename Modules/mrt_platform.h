@@ -6,15 +6,15 @@
   */
 
 #ifdef MRT_PLATFORM_STM32_HAL
-  #include "Stm32_HAL/stm32_hal_abstract.h"
+  #include "Platforms/Stm32_HAL/stm32_hal_abstract.h"
 #endif
 
 #ifdef MRT_PLATFORM_ATMEL_START
-  #include "AtmelStart/atmel_start_abstract.h"
+  #include "Platforms/AtmelStart/atmel_start_abstract.h"
 #endif
 
 #ifdef MRT_PLATFORM_ATMEL_ASF
-  #include "AtmelStart/atmel_asf_abstract.h"
+  #include "Platforms/AtmelStart/atmel_asf_abstract.h"
 #endif
 
 
