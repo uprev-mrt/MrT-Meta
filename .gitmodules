@@ -7,9 +7,6 @@
 [submodule "Modules/Utilities/Fifo"]
 	path = Modules/Utilities/Fifo
 	url = git@bitbucket.org:uprev/utility-fifo.git
-[submodule "Modules/Platforms/AtmelStart"]
-	path = Modules/Platforms/AtmelStart
-	url = git@bitbucket.org:uprev/platform-atmelstart.git
 [submodule "Modules/Devices/Eeprom"]
 	path = Modules/Devices/Eeprom
 	url = git@bitbucket.org:uprev/device-eeprom.git
