@@ -25,9 +25,6 @@
 [submodule "Modules/Utilities/MessageSpool"]
 	path = Modules/Utilities/MessageSpool
 	url = git@bitbucket.org:uprev/utility-messagespool.git
-[submodule "Modules/Platforms"]
-	path = Modules/Platforms
-	url = git@bitbucket.org:uprev/platforms.git
 [submodule "Modules/Platforms/STM32"]
 	path = Modules/Platforms/STM32
 	url = git@bitbucket.org:uprev/platform-stm32.git
