@@ -4,10 +4,25 @@
 
 MrT is a collection of reusable modules that can be easily integrated into new projects. Each module is designed and maintained according to guidelines and standards to keep consistency. This allows uniform implementation, documentation and testing.
 
-## Test
+---
+## Using Mr T for a project:
 
-Automated unit testing will be performed using google test. This gives us the ability to output JUnit style test results that can be integrated with Jenkins plugins.
+The easiest way to get started with MrT is to using the MrT config tool:
 
+Just add the config tool as a submodule of your current project:
+```
+cd <path/to/project>
+git submodule add git@bitbucket.org:uprev/mrt_config.git MrT/Config
+cd MrT/Config
+./mrt_config.py
+```
+This will open up the config gui and let you select modules to be imported.
+
+>There are some requirements for using the tool (Python3, PyQt5)<br/>
+>For more information on getting set up to use it go to MrT Config's Readme:[MrT Config Readme](https://bitbucket.org/uprev/mrt_config/src/master/README.md)
+
+
+---
 ## Modules
 
 #### Platforms
@@ -21,6 +36,13 @@ Deevice modules contain all the logic needed for their operation and communicate
 
 #### Utilities
 Utilities are modules that provide a common functionality with no need for abstraction, that is, they do not depend on any specific hardware or platform. These include Fifos, Hashing functions, encoders/decoders, and messaging protocols.
+
+---
+## Test
+
+Automated unit testing will be performed using google test. This gives us the ability to output JUnit style test results that can be integrated with Jenkins plugins.
+
+---
 
 ## Tools
 The tools section contains various tools used throughout the development cycle
