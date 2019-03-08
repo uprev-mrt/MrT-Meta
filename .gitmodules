@@ -34,3 +34,6 @@
 [submodule "Modules/Platforms/Atmel"]
 	path = Modules/Platforms/Atmel
 	url = git@bitbucket.org:uprev/platform-atmel.git
+[submodule "Config"]
+	path = Config
+	url = git@bitbucket.org:uprev/mrt_config.git
