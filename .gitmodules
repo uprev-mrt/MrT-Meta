@@ -4,6 +4,9 @@
 [submodule "Test"]
 	path = Test
 	url = git@bitbucket.org:uprev/test.git
+[submodule "Modules/Platforms/Common"]
+	path = Modules/Platforms/Common
+	url = git@bitbucket.org:uprev/platform-common.git
 [submodule "Modules/Utilities/Fifo"]
 	path = Modules/Utilities/Fifo
 	url = git@bitbucket.org:uprev/utility-fifo.git
