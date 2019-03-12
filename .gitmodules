@@ -37,3 +37,6 @@
 [submodule "Config"]
 	path = Config
 	url = git@bitbucket.org:uprev/mrt_config.git
+[submodule "Modules/Devices/Sensors/LSM6D"]
+	path = Modules/Devices/Sensors/LSM6D
+	url = git@bitbucket.org:uprev/device-lsm6d.git
