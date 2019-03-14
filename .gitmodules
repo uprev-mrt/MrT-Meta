@@ -43,3 +43,9 @@
 [submodule "Modules/Utilities/GFX/Fonts"]
 	path = Modules/Utilities/GFX/Fonts
 	url = git@bitbucket.org:uprev/utility-gfxfont.git
+[submodule "Modules/Devices/FPGA/Spartan6"]
+	path = Modules/Devices/FPGA/Spartan6
+	url = git@bitbucket.org:uprev/device-spartan6.git
+[submodule "Modules/Devices/Memory/SpiFlash"]
+	path = Modules/Devices/Memory/SpiFlash
+	url = git@bitbucket.org:uprev/device-spiflash.git
