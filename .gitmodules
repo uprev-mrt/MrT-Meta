@@ -10,9 +10,6 @@
 [submodule "Modules/Utilities/Fifo"]
 	path = Modules/Utilities/Fifo
 	url = git@bitbucket.org:uprev/utility-fifo.git
-[submodule "Modules/Devices/Eeprom"]
-	path = Modules/Devices/Eeprom
-	url = git@bitbucket.org:uprev/device-eeprom.git
 [submodule "Modules/Devices/RegDevice"]
 	path = Modules/Devices/RegDevice
 	url = git@bitbucket.org:uprev/device-regdevice.git
