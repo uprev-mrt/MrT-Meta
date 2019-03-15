@@ -49,3 +49,6 @@
 [submodule "Modules/Devices/Memory/Eeprom"]
 	path = Modules/Devices/Memory/Eeprom
 	url = git@bitbucket.org:uprev/device-eeprom.git
+[submodule "Modules/Devices/Displays/TriColorE-Ink"]
+	path = Modules/Devices/Displays/TriColorE-Ink
+	url = git@bitbucket.org:uprev/device-eink_tri.git
