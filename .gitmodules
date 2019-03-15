@@ -52,3 +52,6 @@
 [submodule "Modules/Devices/Displays/TriColorE-Ink"]
 	path = Modules/Devices/Displays/TriColorE-Ink
 	url = git@bitbucket.org:uprev/device-eink_tri.git
+[submodule "Modules/Utilities/GFX/MonoGfx"]
+	path = Modules/Utilities/GFX/MonoGfx
+	url = git@bitbucket.org:uprev/utilities-monogfx.git
