@@ -37,9 +37,6 @@
 [submodule "Modules/Devices/Sensors/LSM6D"]
 	path = Modules/Devices/Sensors/LSM6D
 	url = git@bitbucket.org:uprev/device-lsm6d.git
-[submodule "Modules/Utilities/GFX/Fonts"]
-	path = Modules/Utilities/GFX/Fonts
-	url = git@bitbucket.org:uprev/utility-gfxfont.git
 [submodule "Modules/Devices/FPGA/Spartan6"]
 	path = Modules/Devices/FPGA/Spartan6
 	url = git@bitbucket.org:uprev/device-spartan6.git
