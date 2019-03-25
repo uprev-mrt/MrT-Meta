@@ -13,9 +13,6 @@
 [submodule "Modules/Devices/RegDevice"]
 	path = Modules/Devices/RegDevice
 	url = git@bitbucket.org:uprev/device-regdevice.git
-[submodule "Modules/Utilities/Blob"]
-	path = Modules/Utilities/Blob
-	url = git@bitbucket.org:uprev/utility-blob.git
 [submodule "Modules/Utilities/PolyPacket"]
 	path = Modules/Utilities/PolyPacket
 	url = git@bitbucket.org:uprev/utility-polypacket.git
