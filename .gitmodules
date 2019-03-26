@@ -46,3 +46,6 @@
 [submodule "Modules/Utilities/GFX/MonoGfx"]
 	path = Modules/Utilities/GFX/MonoGfx
 	url = git@bitbucket.org:uprev/utilities-monogfx.git
+[submodule "Modules/Devices/Power/BQ28Z"]
+	path = Modules/Devices/Power/BQ28Z
+	url = git@bitbucket.org:uprev/device-bq28zxxx.git
