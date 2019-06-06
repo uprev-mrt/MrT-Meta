@@ -52,3 +52,6 @@
 [submodule "Modules/Devices/Displays/OLED"]
 	path = Modules/Devices/Displays/OLED
 	url = git@bitbucket.org:uprev/device-oled_wc.git
+[submodule "Modules/Utilities/JSON"]
+	path = Modules/Utilities/JSON
+	url = git@bitbucket.org:uprev/utility-json.git
