@@ -55,3 +55,6 @@
 [submodule "Modules/Utilities/JSON"]
 	path = Modules/Utilities/JSON
 	url = git@bitbucket.org:uprev/utility-json.git
+[submodule "Modules/Platforms/ESP32"]
+	path = Modules/Platforms/ESP32
+	url = git@bitbucket.org:uprev/platform-esp32.git
