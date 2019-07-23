@@ -49,9 +49,6 @@
 [submodule "Modules/Devices/Power/BQ28Z"]
 	path = Modules/Devices/Power/BQ28Z
 	url = git@bitbucket.org:uprev/device-bq28zxxx.git
-[submodule "Modules/Devices/Displays/OLED"]
-	path = Modules/Devices/Displays/OLED
-	url = git@bitbucket.org:uprev/device-oled_wc.git
 [submodule "Modules/Utilities/JSON"]
 	path = Modules/Utilities/JSON
 	url = git@bitbucket.org:uprev/utility-json.git
