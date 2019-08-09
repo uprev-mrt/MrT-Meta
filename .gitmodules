@@ -55,3 +55,6 @@
 [submodule "Modules/Platforms/ESP32"]
 	path = Modules/Platforms/ESP32
 	url = git@bitbucket.org:uprev/platform-esp32.git
+[submodule "Modules/Platforms/Linux"]
+	path = Modules/Platforms/Linux
+	url = git@bitbucket.org:uprev/platform-linux.git
