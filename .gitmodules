@@ -58,3 +58,6 @@
 [submodule "Modules/Platforms/Linux"]
 	path = Modules/Platforms/Linux
 	url = git@bitbucket.org:uprev/platform-linux.git
+[submodule "Modules/Utilities/COBS"]
+	path = Modules/Utilities/COBS
+	url = git@bitbucket.org:uprev/utility-cobs.git
