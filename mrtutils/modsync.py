@@ -13,6 +13,7 @@ import ctypes
 #         if self.success:
 #             self._revert(self.old_value)
 
+
 import sys
 import os
 from sys import platform
@@ -21,13 +22,6 @@ import re
 import subprocess
 import markdown
 from threading import Thread
-
-
-sys.argv.append("--disable-web-security")
-app     = QApplication (sys.argv)
-webview = QWebEngineView()
-tree    = QTreeWidget ()
-
 
 def getGitFileText(url, file):
     txt=""
@@ -116,7 +110,7 @@ class RepoDirectory:
 
         sys.stdout.write(self.name + "\n")
 
-        for mod in self.mods:
+        for mod in self.mods.values():
             sys.stdout.write(start + "+" +mod.name +"\n")
 
         for dir in self.dirs.values():
@@ -124,8 +118,8 @@ class RepoDirectory:
 
 
 class Repo:
-    def __init__(self, url):
-        self.url = url
+    def __init__(self, path):
+        self.url = path
         self.path = path
         self.mods =[]
         self.isRemote = True
@@ -143,7 +137,7 @@ class Repo:
             modules = regex.findall(data)
             for mod in modules:
                 if(mod[1] != "Config"):
-                    mods.append(Submodule(mod[1], mod[2]))
+                    self.mods.append(Submodule(mod[1], mod[2]))
         else:
             if os.path.isfile(self.path):
                 file = open(self.path, "r")
@@ -153,28 +147,28 @@ class Repo:
                 regex = re.compile(r'\[(.*?)].*?path = (.*?)url = (.*?\.git)')
                 modules = regex.findall(data)
                 for mod in modules:
-                    mods.append(Submodule(mod[1], mod[2]))
+                    self.mods.append(Submodule(mod[1], mod[2]))
 
-        def getReadMe(self):
-            if self.isRemote:
-                data = getGitFileText(self.url, 'README.md')
-            return data
+    def getReadMe(self):
+        if self.isRemote:
+            data = getGitFileText(self.url, 'README.md')
+        return data
 
-        def fetchReadmes(self):
-            print ("Fetching README.md from modules")
-            for mod in self.mods:
-                mod.getReadMe()
+    def fetchReadmes(self):
+        print ("Fetching README.md from modules")
+        for mod in self.mods:
+            mod.getReadMe()
 
-        def addSubMod(self,mod):
-            prev_path = os.getcwd()
-            os.chdir(self.path)
-            subprocess.check_output(['git','submodule','add', mod.git_url,  self.relativePath + mod.path] )
-            os.chdir(prev_path)
-            mod.exists = True
+    def addSubModule(self,mod):
+        prev_path = os.getcwd()
+        os.chdir(self.path)
+        subprocess.check_output(['git','submodule','add', mod.git_url,  self.relativePath + mod.path] )
+        os.chdir(prev_path)
+        mod.exists = True
 
-        def removeSubMod(self,mod):
-            prev_path = os.getcwd()
-            os.chdir(self.path)
-            subprocess.check_output(['git','--git-dir',self.path,'submodule','rm', self.relativePath + mod.path ])
-            os.chdir(prev_path)
-            mod.exists = False
+    def removeSubModule(self,mod):
+        prev_path = os.getcwd()
+        os.chdir(self.path)
+        subprocess.check_output(['git','--git-dir',self.path,'submodule','rm', self.relativePath + mod.path ])
+        os.chdir(prev_path)
+        mod.exists = False
