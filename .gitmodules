@@ -61,3 +61,12 @@
 [submodule "Modules/Utilities/COBS"]
 	path = Modules/Utilities/COBS
 	url = https://github.com/up-rev/libCOBS.git
+[submodule "Modules/Devices/Sensors/HTS221"]
+	path = Modules/Devices/Sensors/HTS221
+	url = git@github.com:uprev-mrt/device-hts221.git
+[submodule "Modules/Devices/Sensors/LIS2D12"]
+	path = Modules/Devices/Sensors/LIS2D12
+	url = git@github.com:uprev-mrt/device-lis2dh12.git
+[submodule "Modules/Devices/Sensors/VL53L0X"]
+	path = Modules/Devices/Sensors/VL53L0X
+	url = git@github.com:uprev-mrt/device-vl53l0x.git
