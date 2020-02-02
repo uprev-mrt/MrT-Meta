@@ -7,20 +7,21 @@ MrT is a collection of reusable modules that can be easily integrated into new p
 ---
 ## Using Mr T for a project:
 
-The easiest way to get started with MrT is to using the MrT config tool:
+The MrT Config tool allows you to easily add MrT submodules to your project. 
 
-Just add the config tool as a submodule of your current project:
+```bash
+pip3 isntall mrtutils
+```
+
+>**Note:** MrT Modules are added as git sub-modules, so make sure that you have already initialized your project as a git repo
+
+<br>
+
 ```
 cd <path/to/project>
-git submodule add git@bitbucket.org:uprev/mrt_config.git MrT/Config
-cd MrT/Config
-./mrt_config.py
+mrt-config <relative/path/for/MrT/root>
 ```
 This will open up the config gui and let you select modules to be imported.
-
->There are some requirements for using the tool (Python3, PyQt5)<br/>
->For more information on getting set up to use it go to MrT Config's Readme:[MrT Config Readme](https://bitbucket.org/uprev/mrt_config/src/master/README.md)
-
 
 ---
 ## Modules
