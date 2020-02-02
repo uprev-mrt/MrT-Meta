@@ -12,7 +12,7 @@
 	url = git@bitbucket.org:uprev/utility-fifo.git
 [submodule "Modules/Devices/RegDevice"]
 	path = Modules/Devices/RegDevice
-	url = git@bitbucket.org:uprev/device-regdevice.git
+	url = git@github.com:uprev-mrt/device-regdevice.git
 [submodule "Modules/Utilities/PolyPacket"]
 	path = Modules/Utilities/PolyPacket
 	url = https://github.com/uprev-mrt/libPolyPacket.git
