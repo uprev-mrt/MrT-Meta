@@ -73,3 +73,9 @@
 [submodule "Modules/Devices/Audio/WM8731"]
 	path = Modules/Devices/Audio/WM8731
 	url = git@github.com:uprev-mrt/device-WM8731.git
+[submodule "Modules/Utilities/AudioData"]
+	path = Modules/Utilities/AudioData
+	url = git@github.com:uprev-mrt/utility-audio-test.git
+[submodule "Modules/Utilities/AudioXCoder"]
+	path = Modules/Utilities/AudioXCoder
+	url = git@github.com:uprev-mrt/utility-AudioXcoder.git
