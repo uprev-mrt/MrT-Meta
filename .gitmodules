@@ -76,6 +76,3 @@
 [submodule "Modules/Utilities/AudioData"]
 	path = Modules/Utilities/AudioData
 	url = git@github.com:uprev-mrt/utility-audio-test.git
-[submodule "Modules/Utilities/AudioXCoder"]
-	path = Modules/Utilities/AudioXCoder
-	url = git@github.com:uprev-mrt/utility-AudioXcoder.git
