@@ -79,3 +79,9 @@
 [submodule "Modules/Utilities/Audio/TestData"]
 	path = Modules/Utilities/Audio/TestData
 	url = git@github.com:uprev-mrt/utility-audio-test.git
+[submodule "Modules/Devices/RF/Nrf24"]
+	path = Modules/Devices/RF/Nrf24
+	url = git@github.com:uprev-mrt/device-nrf24.git
+[submodule "Modules/Devices/RF/BLE/GattServer"]
+	path = Modules/Devices/RF/BLE/GattServer
+	url = git@github.com:berge472/device-gatt_server.git
