@@ -1,9 +1,6 @@
 [submodule "Test"]
 	path = Test
 	url = git@bitbucket.org:uprev/test.git
-[submodule "Modules/Platforms/Common"]
-	path = Modules/Platforms/Common
-	url = git@bitbucket.org:uprev/platform-common.git
 [submodule "Modules/Utilities/Fifo"]
 	path = Modules/Utilities/Fifo
 	url = git@bitbucket.org:uprev/utility-fifo.git
@@ -73,3 +70,6 @@
 [submodule "Modules/Devices/RF/BLE/GattServer"]
 	path = Modules/Devices/RF/BLE/GattServer
 	url = git@bitbucket.org:uprev/device-gatt-server.git
+[submodule "Modules/Devices/Audio/WM8731"]
+	path = Modules/Devices/Audio/WM8731
+	url = git@bitbucket.org:uprev/device-wm8731.git
