@@ -73,3 +73,6 @@
 [submodule "Modules/Devices/Audio/WM8731"]
 	path = Modules/Devices/Audio/WM8731
 	url = git@bitbucket.org:uprev/device-wm8731.git
+[submodule "Modules/Platforms/Common"]
+	path = Modules/Platforms/Common
+	url = git@bitbucket.org:uprev/platform-common.git
