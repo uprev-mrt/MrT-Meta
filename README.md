@@ -43,7 +43,10 @@ Utilities are modules that provide a common functionality with no need for abstr
 
 Automated unit testing will be performed using google test. This gives us the ability to output JUnit style test results that can be integrated with Jenkins plugins.
 
+Currently jenkins is set to run a unit test on all modules every night at 11:30 and email stakeholders when there is a failure. 
+
 ---
 
-## Tools
-The tools section contains various tools used throughout the development cycle
+# Adding Modules
+
+For information on adding modules see [AddModules](AddModules.md)
