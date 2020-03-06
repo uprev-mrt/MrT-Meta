@@ -1,79 +1,79 @@
 [submodule "Modules/Platforms/Common"]
 	path = Modules/Platforms/Common
-	url = git@bitbucket.org:uprev/platform-common.git
+	url = https://bitbucket.org/uprev/platform-common.git
 [submodule "Test"]
 	path = Test
-	url = git@bitbucket.org:uprev/test.git
+	url = https://bitbucket.org/uprev/test.git
 [submodule "Modules/Utilities/Fifo"]
 	path = Modules/Utilities/Fifo
-	url = git@bitbucket.org:uprev/utility-fifo.git
+	url = https://bitbucket.org/uprev/utility-fifo.git
 [submodule "Modules/Devices/RegDevice"]
 	path = Modules/Devices/RegDevice
-	url = git@bitbucket.org:uprev/device-regdevice.git
+	url = https://bitbucket.org/uprev/device-regdevice.git
 [submodule "Modules/Utilities/PolyPacket"]
 	path = Modules/Utilities/PolyPacket
-	url = git@bitbucket.org:uprev/utility-polypacket.git
+	url = https://bitbucket.org/uprev/utility-polypacket.git
 [submodule "Modules/Devices/Displays/ErcMonoLcd"]
 	path = Modules/Devices/Displays/ErcMonoLcd
-	url = git@bitbucket.org:uprev/device-ercxxlcd.git
+	url = https://bitbucket.org/uprev/device-ercxxlcd.git
 [submodule "Modules/Platforms/STM32"]
 	path = Modules/Platforms/STM32
-	url = git@bitbucket.org:uprev/platform-stm32.git
+	url = https://bitbucket.org/uprev/platform-stm32.git
 [submodule "Modules/Platforms/Atmel"]
 	path = Modules/Platforms/Atmel
-	url = git@bitbucket.org:uprev/platform-atmel.git
+	url = https://bitbucket.org/uprev/platform-atmel.git
 [submodule "Modules/Devices/Sensors/LSM6D"]
 	path = Modules/Devices/Sensors/LSM6D
-	url = git@bitbucket.org:uprev/device-lsm6d.git
+	url = https://bitbucket.org/uprev/device-lsm6d.git
 [submodule "Modules/Devices/FPGA/Spartan6"]
 	path = Modules/Devices/FPGA/Spartan6
-	url = git@bitbucket.org:uprev/device-spartan6.git
+	url = https://bitbucket.org/uprev/device-spartan6.git
 [submodule "Modules/Devices/Memory/SpiFlash"]
 	path = Modules/Devices/Memory/SpiFlash
-	url = git@bitbucket.org:uprev/device-spiflash.git
+	url = https://bitbucket.org/uprev/device-spiflash.git
 [submodule "Modules/Devices/Memory/Eeprom"]
 	path = Modules/Devices/Memory/Eeprom
-	url = git@bitbucket.org:uprev/device-eeprom.git
+	url = https://bitbucket.org/uprev/device-eeprom.git
 [submodule "Modules/Devices/Displays/TriColorE-Ink"]
 	path = Modules/Devices/Displays/TriColorE-Ink
-	url = git@bitbucket.org:uprev/device-eink_tri.git
+	url = https://bitbucket.org/uprev/device-eink_tri.git
 [submodule "Modules/Utilities/GFX/MonoGfx"]
 	path = Modules/Utilities/GFX/MonoGfx
-	url = git@bitbucket.org:uprev/utilities-monogfx.git
+	url = https://bitbucket.org/uprev/utilities-monogfx.git
 [submodule "Modules/Devices/Power/BQ28Z"]
 	path = Modules/Devices/Power/BQ28Z
-	url = git@bitbucket.org:uprev/device-bq28zxxx.git
+	url = https://bitbucket.org/uprev/device-bq28zxxx.git
 [submodule "Modules/Utilities/JSON"]
 	path = Modules/Utilities/JSON
-	url = git@bitbucket.org:uprev/utility-json.git
+	url = https://bitbucket.org/uprev/utility-json.git
 [submodule "Modules/Platforms/ESP32"]
 	path = Modules/Platforms/ESP32
-	url = git@bitbucket.org:uprev/platform-esp32.git
+	url = https://bitbucket.org/uprev/platform-esp32.git
 [submodule "Modules/Platforms/Linux"]
 	path = Modules/Platforms/Linux
-	url = git@bitbucket.org:uprev/platform-linux.git
+	url = https://bitbucket.org/uprev/platform-linux.git
 [submodule "Modules/Utilities/COBS"]
 	path = Modules/Utilities/COBS
-	url = git@bitbucket.org:uprev/utility-cobs.git
+	url = https://bitbucket.org/uprev/utility-cobs.git
 [submodule "Modules/Devices/Sensors/HTS221"]
 	path = Modules/Devices/Sensors/HTS221
-	url = git@bitbucket.org:uprev/device-hts221.git
+	url = https://bitbucket.org/uprev/device-hts221.git
 [submodule "Modules/Devices/Sensors/LIS2D12"]
 	path = Modules/Devices/Sensors/LIS2D12
-	url = git@bitbucket.org:uprev/device-lis2dh12.git
+	url = https://bitbucket.org/uprev/device-lis2dh12.git
 [submodule "Modules/Utilities/Audio/xCoder"]
 	path = Modules/Utilities/Audio/xCoder
-	url = git@bitbucket.org:uprev/utility-AudioXcoder.git
+	url = https://bitbucket.org/uprev/utility-AudioXcoder.git
 [submodule "Modules/Utilities/Audio/TestData"]
 	path = Modules/Utilities/Audio/TestData
-	url = git@bitbucket.org:uprev/utility-audio-test.git
+	url = https://bitbucket.org/uprev/utility-audio-test.git
 [submodule "Modules/Devices/RF/Nrf24"]
 	path = Modules/Devices/RF/Nrf24
-	url = git@bitbucket.org:uprev/device-nrf24.git
+	url = https://bitbucket.org/uprev/device-nrf24.git
 [submodule "Modules/Devices/RF/BLE/GattServer"]
 	path = Modules/Devices/RF/BLE/GattServer
-	url = git@bitbucket.org:uprev/device-gatt-server.git
+	url = https://bitbucket.org/uprev/device-gatt-server.git
 [submodule "Modules/Devices/Audio/WM8731"]
 	path = Modules/Devices/Audio/WM8731
-	url = git@bitbucket.org:uprev/device-wm8731.git
+	url = https://bitbucket.org/uprev/device-wm8731.git
 
