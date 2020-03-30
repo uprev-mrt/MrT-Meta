@@ -77,3 +77,6 @@
 	path = Modules/Devices/Audio/WM8731
 	url = https://bitbucket.org/uprev/device-wm8731.git
 
+[submodule "Modules/Devices/Power/STC3117"]
+	path = Modules/Devices/Power/STC3117
+	url = https://bitbucket.org/uprev/device-stc3117.git
