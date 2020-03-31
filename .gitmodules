@@ -58,9 +58,6 @@
 [submodule "Modules/Devices/Sensors/HTS221"]
 	path = Modules/Devices/Sensors/HTS221
 	url = https://bitbucket.org/uprev/device-hts221.git
-[submodule "Modules/Devices/Sensors/LIS2D12"]
-	path = Modules/Devices/Sensors/LIS2D12
-	url = https://bitbucket.org/uprev/device-lis2dh12.git
 [submodule "Modules/Utilities/Audio/xCoder"]
 	path = Modules/Utilities/Audio/xCoder
 	url = https://bitbucket.org/uprev/utility-AudioXcoder.git
