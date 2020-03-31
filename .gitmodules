@@ -77,3 +77,9 @@
 [submodule "Modules/Devices/Power/STC3117"]
 	path = Modules/Devices/Power/STC3117
 	url = https://bitbucket.org/uprev/device-stc3117.git
+[submodule "Modules/Devices/Sensors/SHT31"]
+	path = Modules/Devices/Sensors/SHT31
+	url = https://bitbucket.org/uprev/device-sht31.git
+[submodule "Modules/Devices/Sensors/LIS2DH12"]
+	path = Modules/Devices/Sensors/LIS2DH12
+	url = https://bitbucket.org/uprev/device-lis2dh12.git
