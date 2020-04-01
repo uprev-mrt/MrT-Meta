@@ -83,3 +83,6 @@
 [submodule "Modules/Devices/Sensors/LIS2DH12"]
 	path = Modules/Devices/Sensors/LIS2DH12
 	url = https://bitbucket.org/uprev/device-lis2dh12.git
+[submodule "Modules/Utilities/Interfaces/GattServer"]
+	path = Modules/Utilities/Interfaces/GattServer
+	url = https://bitbucket.org/uprev/device-gatt-server.git
