@@ -67,9 +67,6 @@
 [submodule "Modules/Devices/RF/Nrf24"]
 	path = Modules/Devices/RF/Nrf24
 	url = https://bitbucket.org/uprev/device-nrf24.git
-[submodule "Modules/Devices/RF/BLE/GattServer"]
-	path = Modules/Devices/RF/BLE/GattServer
-	url = https://bitbucket.org/uprev/device-gatt-server.git
 [submodule "Modules/Devices/Audio/WM8731"]
 	path = Modules/Devices/Audio/WM8731
 	url = https://bitbucket.org/uprev/device-wm8731.git
