@@ -83,3 +83,9 @@
 [submodule "Modules/Utilities/Interfaces/GattServer"]
 	path = Modules/Utilities/Interfaces/GattServer
 	url = https://bitbucket.org/uprev/device-gatt-server.git
+[submodule "Modules/Devices/Sensors/VL53L0x"]
+	path = Modules/Devices/Sensors/VL53L0x
+	url = https://bitbucket.org/uprev/device-vl53l0x.git
+[submodule "Modules/Devices/MotorDrivers/STSPIN220"]
+	path = Modules/Devices/MotorDrivers/STSPIN220
+	url = https://bitbucket.org/uprev/device-stspin220.git
