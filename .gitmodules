@@ -89,3 +89,6 @@
 [submodule "Modules/Devices/MotorDrivers/STSPIN220"]
 	path = Modules/Devices/MotorDrivers/STSPIN220
 	url = https://bitbucket.org/uprev/device-stspin220.git
+[submodule "Modules/Devices/Displays/SSD1306"]
+	path = Modules/Devices/Displays/SSD1306
+	url = https://bitbucket.org/uprev/device-ssd1306.git
