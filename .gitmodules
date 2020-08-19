@@ -92,3 +92,6 @@
 [submodule "Modules/Devices/Displays/SSD1306"]
 	path = Modules/Devices/Displays/SSD1306
 	url = https://bitbucket.org/uprev/device-ssd1306.git
+[submodule "Modules/Utilities/ByteFifo"]
+	path = Modules/Utilities/ByteFifo
+	url = https://jasonBerger@bitbucket.org/uprev/utility-byte_fifo.git
