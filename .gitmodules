@@ -94,4 +94,7 @@
 	url = https://bitbucket.org/uprev/device-ssd1306.git
 [submodule "Modules/Utilities/ByteFifo"]
 	path = Modules/Utilities/ByteFifo
-	url = https://jasonBerger@bitbucket.org/uprev/utility-byte_fifo.git
+	url = https://bitbucket.org/uprev/utility-byte_fifo.git
+[submodule "Modules/Devices/IO/STM8-Expander"]
+	path = Modules/Devices/IO/STM8-Expander
+	url = https://bitbucket.org/uprev/device-stm8-expander.git
