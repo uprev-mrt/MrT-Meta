@@ -4,4 +4,4 @@ mkdir Test/build
 cd Test/build
 cmake ..
 make
-./runTests
+valgrind --leak-check=full --show-leak-kinds=all --log-file=memcheck.log ./runTests
