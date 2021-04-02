@@ -34,6 +34,7 @@ RUN apt update -qq && apt install -qq -y --no-install-recommends \
         valgrind \
         python3\ 
         python3-pip\
+        gdb \
         ca-certificates
 
 

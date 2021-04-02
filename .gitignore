@@ -6,3 +6,5 @@ Doc/latex/
 Doc/html/
 
 CMakeFiles/
+
+build/
