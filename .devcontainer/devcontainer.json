@@ -15,7 +15,7 @@
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [],
+	"extensions": ["ms-vscode.cpptools","twxs.cmake","ms-python.python","redhat.vscode-yaml"],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	 "forwardPorts": ["22225:22"],
