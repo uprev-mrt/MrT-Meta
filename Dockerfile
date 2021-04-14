@@ -1,14 +1,12 @@
-# TODO multistage build to build backend api based on os, then copy those over to front end and cli areas and build each
-# FROM <image for building the c++ side> as base build
-# WORKDIR ./API
-# CMD run some build step for the backend
-
-# COPY --from=build out/build/x86-Debug/UCI_lib/UCI_lib /out
-# COPY --from=build out/build/x86-Debug/UCI_lib/UCI_lib/UCI_lib_x86 /out
 
 FROM ubuntu:20.04 as dev
 
+#prevent prompts during installs
 ENV DEBIAN_FRONTEND=noninteractive
+
+#passwords as arguments so they can be changed
+ARG DEV_PW=password
+ARG JENKINS_PW=jenkins
 
 
 # Install system dependencies
@@ -24,14 +22,12 @@ RUN apt update -qq && apt install -qq -y --no-install-recommends \
         valgrind \
         python3\ 
         python3-pip\
-        gdb \
-        ca-certificates
+        gdb 
 
 
 # Add user dev to the image
 RUN adduser --quiet dev && \
-# Set password for the jenkins user (you may want to alter this).
-    echo "dev:password" | chpasswd && \
+    echo "dev:$DEV_PW" | chpasswd && \
     mkdir /home/dev/.m2 && \
     mkdir /home/dev/dev && \
     chown -R dev /home/dev 
@@ -40,12 +36,15 @@ RUN adduser --quiet dev && \
 RUN pip3 install polypacket 
 RUN pip3 install mrtutils
 
-#Stage to add jenkins support 
+######################################################################################################
+#                           Stage: jenkins                                                           #
+######################################################################################################
 FROM dev as jenkins
+
+#install jenkins dependencies
 RUN apt install apt install -qq -y --no-install-recommends openjdk-8-jdk  openssh-server ca-certificates
 RUN adduser --quiet jenkins && \
-# Set password for the jenkins user (you may want to alter this).
-    echo "jenkins:jenkins" | chpasswd && \
+    echo "jenkins:$JENKINS_PW" | chpasswd && \
     mkdir /home/jenkins/.m2 && \
     mkdir /home/jenkins/jenkins && \
     chown -R jenkins /home/jenkins 
