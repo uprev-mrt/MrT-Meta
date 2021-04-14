@@ -10,7 +10,7 @@
    :caption: Contents:
 
    pages/getting_started
-   pages/adding_modules
+   pages/adding_modules/adding_modules
 
 MrT Framework
 =============
