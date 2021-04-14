@@ -5,7 +5,6 @@ This section covers the information needed for contributors to add modules to th
 
 .. toctree::
    :maxdepth: 1
-   :hidden:
    :caption: Contents:
 
    creating_the_module
