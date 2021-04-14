@@ -8,3 +8,5 @@ Doc/html/
 CMakeFiles/
 
 build/
+
+docs/_build/
