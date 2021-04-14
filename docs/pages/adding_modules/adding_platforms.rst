@@ -3,6 +3,25 @@ Adding Platforms
 
 Platform modules are meants to abstract any IO operations. This can normally be done by typdefing native platform types to the mrt_xx_t equivalent, and using a macro to pass through operation. In some cases, you may have to get a little creative to make it work, but the macros make the system pretty flexible. 
 
+When adding a platform, the header and symbol must be added to ``Platforms/Common/mrt_platform.h`` 
+
+example from ``Platforms/Common/mrt_platform.h`` 
+
+.. code-block:: C 
+
+    ...
+
+    #if MRT_PLATFORM == MRT_STM32_HAL
+        #include "Platforms/STM32/stm32_hal_abstract.h"
+        #define MRT_PLATFORM_STRING "STM32_HAL"
+        #include "platform_check.h"
+    #endif
+
+    ...
+
+Then in the header for the module, you can abstract the various IO operations. 
+
+
 Delay Abstraction
 ~~~~~~~~~~~~~~~~~
 *   MRT_DELAY_MS(ms)
@@ -50,10 +69,15 @@ printf
 ~~~~~~
 *   MRT_PRINTF(f\_, ...)
 
+
+.. note:: Not every function has to be used. Any undefined functions will be defined as NOP() and a warning will be displayed at compile time to let the user know the function is not available on the platform.
+
 Example from ``Platforms/Atmel``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block :: C
+
+    ...
     
     //Delay Abstraction
     #define MRT_DELAY_MS(ms) delay_ms(ms)
@@ -73,5 +97,7 @@ Example from ``Platforms/Atmel``
 
     //printf
     #define MRT_PRINTF(f_, ...) printf((f_), __VA_ARGS__)
+
+    ...
 
 
