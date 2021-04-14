@@ -7,7 +7,7 @@ This section covers the information needed for contributors to add modules to th
    :maxdepth: 1
    :caption: Contents:
 
-   creating_the_module
+   creating_a_module
    adding_platforms
    adding_devices
    adding_utilities

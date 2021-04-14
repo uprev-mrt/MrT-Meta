@@ -19,8 +19,8 @@ To get started, you can create a template:
 `this will create a decriptor file my_profile.yml with an example profile filled out` 
 
 
-Descriptor File 
----------------
+Step 1: Define the profile
+--------------------------
 
 The Generated example descriptor file has comments to explaind the various fields. The overall structure is that each descriptor file creates a ``Profile``. A ``Profile`` is a group of ``Services``, and a ``Service`` is a group of related ``Characteristics``
 
@@ -114,7 +114,7 @@ Example File
     #########################################
     - Device:
         uri: org.bluetooth.service.device_information #User URI of bluetooth sig standard service
-        prefix: ds
+        prefix: dev
         icon: fa-server #this isfor the live ICD (and completely optional). just adds an icon from here: https://fontawesome.com/icons?d=gallery&m=free
         chars:
             - {uri: org.bluetooth.characteristic.manufacturer_name_string , default: Up-Rev}  #list out uris of 'optional' desired chars
@@ -174,11 +174,97 @@ Example File
                 - COMPLETE:  Firmware download complete. ready to update
 
 
-Generated Code 
---------------
+Step 2: Generate Code 
+---------------------
+
+Once you have the profile defined, you can generate the code with 
+
+.. code-block:: bash 
+
+    mrt-ble -i <yaml file> -o <output/path> -d <doc/path>
+
+.. note:: regenerating the source code will **not** overwrite any code in the handler functions for the profile or services.
+
+This will generate the following structure with source/header files:
+
+| outputDir
+| ├── svc 
+| │   ├── dev_svc.h 
+| │   ├── dev_svc.c
+| │   ├── ss_svc.h 
+| │   ├── ss_svc.c 
+| │   ├── bat_svc.h 
+| │   ├── bat_svc.c 
+| │   ├── ota_svc.h 
+| │   └── ota_svc.c
+| ├── app_dev_svc.c      
+| ├── app_ss_svc.c      
+| ├── app_bat_svc.c      
+| ├── app_ota_svc.c
+| └── sample_profile.c/h
+
+Step 3: Integrating Code
+------------------------
+
+
+The files in the ``svc`` folder are the low level descriptors and weakly defined handler functions. In most cases, there is no need to modify these files. 
+
+The ``app_xx_svc.c`` files are for application level logic and contain the actual handler functions. This is where you will put in your logic for handling events for each characteristic. 
+
+Each service will have an event handler for each ``Characteristic`` and a ``post_init`` handler. The ``post_init`` handler is called after the GATT server is initialized. This is where default values will be set. 
+
+The ``Characteristic`` event handlers handle all events for a given ``Characteristic``. The ``mrt_gatt_evt_t`` struct contains the type of event [READ, WRITE,NOTIFY], as well as the raw data, and data size for the event. 
+
+example handlers from app_dev_svc.c: 
+
+.. code-block:: C 
+
+    /* Post Init -----------------------------------------------------------------*/
+
+    /**
+    * @brief Called after GATT Server is intialized
+    */
+    void dev_svc_post_init_handler(void)
+    {
+        dvc_set_manufacturer_name("Up-Rev");    
+        dvc_set_firmware_revision("0.1.9");
+        dvc_set_serial_number("001");
+    }
+
+    /* Characteristic Event Handlers----------------------------------------------*/
+
+    /**
+    * @brief Handles GATT event on Manufacturer_Name Characteristic
+    * @param event - ptr to mrt_gatt_evt_t event with data and event type
+    */
+    mrt_status_t dev_manufacturer_name_handler(mrt_gatt_evt_t* event)
+    {
+        if(event->mType == GATT_EVT_VALUE_WRITE)
+        {
+            char* val = ((char*) event->mData.data); /* Cast to correct data type*/
+            MRT_PRINTF("Device name set to %s", val);
+        }
+
+        return MRT_STATUS_OK;
+    }
+
+.. note:: For more information on the mrt_gatt_evt_t struct, read the docs for the `gatt-server module <https://bitbucket.org/uprev/device-gatt-server/src/master/>`_
+
+
+
+The source code and header for ``sample_profile.c`` contain the initialization funtion which will initialize all of the services. This function is called by the platform once the GATT server is up. This will vary from platform to platform so check the ``Platform`` documentation for how to implement this. But the most common method is to register the init function, before starting any bluetooth services. 
+
+.. code-block:: C 
+
+    MRT_GATT_REGISTER_PROFILE_INIT(sample_profile_init);
+
+Once the function is registered, it is up to the Platform layer to call the function at the appropriate time. 
+
 
 
 Live ICD 
 --------
+
+Once your GATT profile is running on the target device, it is useful to be able to interact with it for testing and development. When the code is generated with documentation it produces 2 files. The first is a plain text ICD for documentation, and the second is a ``Live ICD``. This is a single page web app which can connect to the device over BLE and provide a GUI for interacting with the device. 
 
 .. image:: ../../images/live_icd.png
