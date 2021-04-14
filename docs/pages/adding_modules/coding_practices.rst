@@ -3,6 +3,9 @@ Coding Practices
 
 All of the modules should be written in pure C since the goal is to be reusable across many embedded platforms. 
 
+Documentation and Comments
+--------------------------
+
 All public functions should be documented using doxygen style comments: 
 
 .. code-block:: C 

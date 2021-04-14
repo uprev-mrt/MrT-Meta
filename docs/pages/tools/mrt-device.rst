@@ -18,7 +18,6 @@ To generate a blank template to start from:
 
     mrt-device -t /path/to/file.yml
 
-
 example from `hts221 driver <https://github.com/uprev-mrt/device-hts221>`_
 
 .. code-block::  yaml
@@ -106,8 +105,26 @@ example from `hts221 driver <https://github.com/uprev-mrt/device-hts221>`_
 
 
 
+The descriptor file contains device information such as part numbers, links to datashees, and other relevant information. It also contains definitions of registers and data structures on the device. The main sections are `Header Properties`_ , `Registers`_ , and `Fields`_
 
-The descriptor file contains device information such as part numbers, links to datashees, and other relevant information. It also contains definitions of registers and data structures on the device. The entities in the definition are:
+
+Header Properties 
+~~~~~~~~~~~~~~~~~
+
+The header of the descriptor file contains several Properties. ``name`` and ``description`` are required, but others should also be included if they apply 
+
+
+
+:name:          Name of device
+:description:   Description of device
+:datasheet:     url to public datasheet 
+:mfg:           Name of manufacturer
+:mfg_pn:        Manufacturer part number 
+:digikey_pn:    Digikey part number 
+
+:prefix:        prefix to append to struct and function names to prevent conflicts in projects
+:bus:           bus type for driver, can be ``I2C``, ``SPI``, ``UART``, or any combination of those (comma separated)
+:i2c_addr:      I2C address for device. For devices with configurable address, set this to the base address. It can be changed in the driver 
 
 Registers 
 ~~~~~~~~~
@@ -185,7 +202,10 @@ If the device does not follow the normal register access schemes, you can specif
       *param len length of data to write
       *@return status (type defined by platform)
       */
-    mrt_status_t my_write_function(mrt_regdev_t* dev, uint32_t addr, uint8_t* data,int len );
+    mrt_status_t my_write_function(mrt_regdev_t* dev, uint32_t addr, uint8_t* data,int len )
+    {
+        //Do Something
+    }
 
     static mrt_status_t hts_init(hts221_t* dev)
     {   

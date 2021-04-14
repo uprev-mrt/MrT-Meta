@@ -1,4 +1,6 @@
-Adding Platforms
+.. _adding_platforms:
+
+Platform Modules
 ================
 
 Platform modules are meants to abstract any IO operations. This can normally be done by typdefing native platform types to the mrt_xx_t equivalent, and using a macro to pass through operation. In some cases, you may have to get a little creative to make it work, but the macros make the system pretty flexible. 

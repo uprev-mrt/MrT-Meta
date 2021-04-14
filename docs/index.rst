@@ -3,6 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+Home
+====
 
 .. toctree::
    :maxdepth: 1
@@ -11,6 +13,7 @@
 
    pages/getting_started
    pages/adding_modules/adding_modules
+   pages/tools/mrtutils
 
 MrT Framework
 =============
@@ -27,19 +30,19 @@ There are three types of modules in the `MrT` framework `Platforms`, `Devices`, 
 Platforms
 ~~~~~~~~~
 
-Platforms are abstractions for specific platforms. This could be an OS or an MCU family. Each platform contains abstracted interfaces such as GPIO, Uart, SPI, and I2C. This allows the device modules to have a common interface for all platforms. When using a platform module, check the Readme for the module for the integrations steps specific to that platform. Normally these are just the steps to include the `Modules` directory in the projects include path
+Platforms are abstractions for specific platforms. This could be an OS or an MCU family. Each platform contains abstracted interfaces such as GPIO, Uart, SPI, and I2C. This allows the device modules to have a common interface for all platforms. When using a platform module, check the Readme for the module for the integrations steps specific to that platform. Normally these are just the steps to include the `Modules` directory in the projects include path, and define the ``MRT_PLATFORM`` symbol
 
 Devices
 ~~~~~~~
 
 Devices are modules for supporting commonly used ICs in projects. This would include common sensors, flash/eeprom memory, displays, battery charge controllers, etc.
 
-Deevice modules contain all the logic needed for their operation and communicate using abstracted interfaces from platform modules
+Device modules contain all the logic needed for their operation and communicate using abstracted interfaces from platform modules
 
 Utilities
 ~~~~~~~~~
 
-Utilities are modules that provide a common functionality with no need for abstraction, that is, they do not depend on any specific hardware or platform. These include Fifos, Hashing functions, encoders/decoders, and messaging protocols. Because these do not rely on any hardware, they can be used without a `Platform` module
+Utilities are modules that provide a common functionality with no need for abstraction i.e., they do not depend on any specific hardware or platform. These include Fifos, Hashing functions, encoders/decoders, and messaging protocols. Because these do not rely on any hardware, they can be used without a ``Platform`` module
 
 
 
