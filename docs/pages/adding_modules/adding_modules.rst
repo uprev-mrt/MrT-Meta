@@ -1,4 +1,4 @@
-Adding Modules
+Contributing
 ==============
 
 This section covers the information needed for contributors to add modules to the framework 

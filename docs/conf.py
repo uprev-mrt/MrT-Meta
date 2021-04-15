@@ -61,3 +61,6 @@ source_suffix = {
     '.txt': 'markdown',
     '.md': 'markdown',
 }
+
+# breathe_projects = { "MrT_Modules": "doxygen/xml" }
+# breathe_default_projects = { "MrT_Modules" }

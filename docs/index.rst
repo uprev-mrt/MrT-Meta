@@ -12,8 +12,9 @@ Home
    :caption: Contents:
 
    pages/getting_started
-   pages/adding_modules/adding_modules
    pages/tools/mrtutils
+   pages/tutorial/tutorial
+   pages/adding_modules/adding_modules
 
 MrT Framework
 =============
