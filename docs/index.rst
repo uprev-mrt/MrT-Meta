@@ -9,12 +9,25 @@ Home
 .. toctree::
    :maxdepth: 1
    :hidden:
-   :caption: Contents:
+   :caption: Using MrT:
 
    pages/getting_started
-   pages/tools/mrtutils
    pages/tutorial/tutorial
-   pages/adding_modules/adding_modules
+
+.. toctree::
+   :hidden: 
+   :caption: Tools 
+
+   pages/mrtutils/mrtutils
+   pages/polypacket/polypacket
+
+.. toctree:: 
+   :hidden: 
+   :caption: Contributing 
+
+   pages/contributing/adding_modules 
+   pages/contributing/coding_practices
+
 
 MrT Framework
 =============
@@ -44,6 +57,7 @@ Utilities
 ~~~~~~~~~
 
 Utilities are modules that provide a common functionality with no need for abstraction i.e., they do not depend on any specific hardware or platform. These include Fifos, Hashing functions, encoders/decoders, and messaging protocols. Because these do not rely on any hardware, they can be used without a ``Platform`` module
+
 
 
 

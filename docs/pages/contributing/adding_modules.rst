@@ -1,4 +1,4 @@
-Contributing
+Adding Modules
 ==============
 
 This section covers the information needed for contributors to add modules to the framework 
@@ -11,7 +11,6 @@ This section covers the information needed for contributors to add modules to th
    adding_platforms
    adding_devices
    adding_utilities
-   coding_practices
 
 
 

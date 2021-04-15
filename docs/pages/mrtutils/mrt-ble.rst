@@ -52,13 +52,15 @@ Characteristics are individual fields in a ``Service``. In a SIG standard ``Serv
 Custom Characteristics must have a ``type``. this can be any of the following
 
 +----------+----------------------------+
-| type     | Description                |
+| Type     | Description                |
 +==========+============================+
 | uint8    |                            |
 +----------+                            |
-| uint16   |  Basic Unsigned            |
+| uint16   |  Basic Unsigned Integer    |
++----------+           Types            |
+| uint32   |                            |
 +----------+                            |
-| uint32   |       Types                |
+| uint64   |                            |
 +----------+                            |
 | uint     |                            |
 +----------+                            |
@@ -66,11 +68,17 @@ Custom Characteristics must have a ``type``. this can be any of the following
 +----------+----------------------------+
 | int8     |                            |
 +----------+                            |
-| int16    |   Basic Signed             |
+| int16    |   Basic Signed Integer     |
 +----------+       Types                |
 | int32    |                            |
 +----------+                            |
+| int64    |                            |
++----------+                            |
 | int      |                            |
++----------+----------------------------+
+| float    |        decimal types       |
++----------+                            |
+| double   |                            |
 +----------+----------------------------+
 | string   | array of chars             |
 +----------+----------------------------+

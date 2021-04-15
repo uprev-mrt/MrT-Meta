@@ -66,13 +66,15 @@ A field is a data object within a packet. These can be expressed either as neste
 Supported types: 
 
 +----------+----------------------------+
-| type     | Description                |
+| Type     | Description                |
 +==========+============================+
 | uint8    |                            |
 +----------+                            |
-| uint16   |  Basic Unsigned            |
+| uint16   |  Basic Unsigned Integer    |
++----------+           Types            |
+| uint32   |                            |
 +----------+                            |
-| uint32   |       Types                |
+| uint64   |                            |
 +----------+                            |
 | uint     |                            |
 +----------+                            |
@@ -80,11 +82,17 @@ Supported types:
 +----------+----------------------------+
 | int8     |                            |
 +----------+                            |
-| int16    |   Basic Signed             |
+| int16    |   Basic Signed Integer     |
 +----------+       Types                |
 | int32    |                            |
 +----------+                            |
+| int64    |                            |
++----------+                            |
 | int      |                            |
++----------+----------------------------+
+| float    |        decimal types       |
++----------+                            |
+| double   |                            |
 +----------+----------------------------+
 | string   | array of chars             |
 +----------+----------------------------+
