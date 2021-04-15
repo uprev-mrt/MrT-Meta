@@ -3,7 +3,7 @@ PolyPacket
 
 .. image:: ../../images/polypacket.png 
 
-Poly Packet is a set of tools aimed at generating protocols from embedded projects. Protocols are described in an YAML document which can be easily shared with all components of a system.
+Poly Packet is a set of tools aimed at generating serial communication protocols from embedded projects. Protocols are described in an YAML document which can be easily shared with all components of a system.
 
 A python script is used to parse the YAML file and generate C/C++ code as well as documentation. The code generation tool can create the back end service, application layer, and even an entire linux utility app
 
@@ -374,12 +374,12 @@ This example initalizes the service with 1 interface. An ``interface`` is an abs
 
 The ``Spool size`` just determines how much memory the message spool (per interface) uses. With a size of 8, we can have 8 messages on the outgoing spool for each interface at a time. This really only comes into play when we are using auto-retries since packets stay on the spool until they are acknowledged or exceed the max-retry count. 
 
----
+
 
 Register Tx functions
 ~~~~~~~~~~~~~~~~~~~~~
 
-For each interface we need to register a send function. This allows us the service to handle the actual sending so we can automate things like acknowledgements and retries. There are two types of send callbacks that can be registered:
+For each interface we need to register a send function. This allows the service to handle the actual sending so we can automate things like acknowledgements and retries. There are two types of send callbacks that can be registered:
 
 .. code-block:: C
 
@@ -387,7 +387,7 @@ For each interface we need to register a send function. This allows us the servi
     typedef HandlerStatus_e (*poly_tx_packet_callback)(poly_packet_t* packet );
 
 
-The ``poly_tx_byte_callback`` will pass the packet as an array of COBS encoded bytes which can be sent directly over a serial connection. 
+The ``poly_tx_byte_callback`` will pass the packet as an array of `COBS <https://en.wikipedia.org/wiki/Consistent_Overhead_Byte_Stuffing>`_ encoded bytes which can be sent directly over a serial connection. 
 
 The ``poly_tx_packet_callback`` will pass a reference to the packet itself which can be converted to JSON, or manipulated before sending.
 
@@ -558,7 +558,7 @@ For handling incoming json packets, there are two options. you can feed the json
 Async JSON
 ~~~~~~~~~~
 
-.. code-block: C
+.. code-block:: C
 
     void app_json_async_handler(char* strJson, int len)
     {
@@ -569,7 +569,7 @@ Async JSON
 Sync JSON
 ~~~~~~~~~
 
-.. code-block: C
+.. code-block:: C
 
     void app_json_sync_handler(const char* strRequest, int len, char* strResp)
     {
