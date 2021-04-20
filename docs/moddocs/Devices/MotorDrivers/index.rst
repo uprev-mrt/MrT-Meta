@@ -1,5 +1,5 @@
 MotorDrivers
-=======
+============
 .. toctree::
 	:caption: MotorDrivers
 	:titlesonly:

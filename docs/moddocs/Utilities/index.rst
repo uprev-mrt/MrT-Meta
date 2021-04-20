@@ -1,5 +1,5 @@
 Utilities
-=======
+=========
 .. toctree::
 	:caption: Utilities
 	:titlesonly:

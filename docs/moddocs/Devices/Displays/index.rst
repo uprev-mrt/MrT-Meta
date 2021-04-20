@@ -1,5 +1,5 @@
 Displays
-=======
+========
 .. toctree::
 	:caption: Displays
 	:titlesonly:

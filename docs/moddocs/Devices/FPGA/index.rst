@@ -1,5 +1,5 @@
 FPGA
-=======
+====
 .. toctree::
 	:caption: FPGA
 	:titlesonly:

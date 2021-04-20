@@ -31,7 +31,11 @@ RUN apt update -qq && apt install -qq -y --no-install-recommends \
         python3-setuptools \ 
         locales
 
-
+#For Ubuntu Versions older than 20.04, the gtest lib must be built and installed manually for CMake integration
+WORKDIR /usr/src/gtest
+RUN cmake CmakeLists.txt
+RUN make 
+RUN make install
 
 # Add user dev to the image
 RUN adduser --quiet dev && \
@@ -39,7 +43,7 @@ RUN adduser --quiet dev && \
     chown -R dev /home/dev 
 
 
-RUN pip3 install mrtutils Sphinx breathe m2r2 sphinx_rtd_theme recommonmark
+RUN pip3 install mrtutils Sphinx breathe sphinx_rtd_theme recommonmark 
 
 ######################################################################################################
 #                           Stage: jenkins                                                           #

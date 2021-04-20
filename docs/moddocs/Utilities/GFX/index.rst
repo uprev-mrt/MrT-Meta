@@ -1,5 +1,5 @@
 GFX
-=======
+===
 .. toctree::
 	:caption: GFX
 	:titlesonly:

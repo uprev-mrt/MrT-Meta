@@ -1,5 +1,5 @@
 Power
-=======
+=====
 .. toctree::
 	:caption: Power
 	:titlesonly:

@@ -1,5 +1,5 @@
 IO
-=======
+==
 .. toctree::
 	:caption: IO
 	:titlesonly:
