@@ -28,7 +28,7 @@ html_favicon = 'images/favicon.ico'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['recommonmark']
+extensions = ['recommonmark','breathe']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -63,5 +63,18 @@ source_suffix = {
     '.md': 'markdown',
 }
 
-# breathe_projects = { "MrT_Modules": "doxygen/xml" }
-# breathe_default_projects = { "MrT_Modules" }
+html_sidebars = {
+        '**': [
+                 'localtoc.html',
+                 'relations.html',
+                 'searchbox.html',
+                 # located at _templates/
+                 'foo.html',
+            ]
+
+        }
+
+breathe_projects = { "test": "doxygen/xml" }
+
+breathe_default_project = "test" 
+

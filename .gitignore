@@ -10,3 +10,5 @@ CMakeFiles/
 build/
 
 docs/_build/
+
+docs/doxygen/
