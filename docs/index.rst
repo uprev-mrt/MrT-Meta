@@ -21,12 +21,21 @@ Home
    pages/mrtutils/mrtutils
    pages/polypacket/polypacket
 
+.. tocTree::
+   :hidden:
+   :titlesonly:
+   :caption: Modules
+
+   modules
+
+
 .. toctree:: 
    :hidden: 
    :caption: Contributing 
 
    pages/contributing/adding_modules 
    pages/contributing/coding_practices
+
 
 
 

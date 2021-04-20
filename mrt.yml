@@ -15,7 +15,8 @@ BQ28Z:
   description: Battery Fuel Gauge
   digikey_pn: 296-43394-1-ND
   doc: Modules/Devices/Power/BQ28Z/README.md
-  manual: http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=sluua65&fileType=pdf
+  docs:
+  - manual: http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=sluua65&fileType=pdf
   mfg: Texas Instruments
   mfg_pn: BQ28Z610DRZT
   name: BQ28Z

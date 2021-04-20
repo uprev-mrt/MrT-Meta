@@ -1,5 +1,5 @@
 
-FROM ubuntu:20.04 as dev
+FROM ubuntu:18.04 as dev
 
 #prevent prompts during installs
 ENV DEBIAN_FRONTEND=noninteractive
@@ -7,6 +7,10 @@ ENV DEBIAN_FRONTEND=noninteractive
 #passwords as arguments so they can be changed
 ARG DEV_PW=password
 ARG JENKINS_PW=jenkins
+
+ENV LC_CTYPE en_US.UTF-8
+ENV LANG en_US.UTF-8
+
 
 
 # Install system dependencies
@@ -18,31 +22,38 @@ RUN apt update -qq && apt install -qq -y --no-install-recommends \
         make \
         lcov \
         cmake \ 
+        doxygen \
         libgtest-dev \
         valgrind \
         python3\ 
         python3-pip\
-        gdb 
+        gdb \
+        python3-setuptools \ 
+        locales
+
 
 
 # Add user dev to the image
 RUN adduser --quiet dev && \
     echo "dev:$DEV_PW" | chpasswd && \
-    mkdir /home/dev/.m2 && \
-    mkdir /home/dev/dev && \
     chown -R dev /home/dev 
 
 
-RUN pip3 install polypacket 
-RUN pip3 install mrtutils
+RUN pip3 install mrtutils Sphinx breathe m2r2 sphinx_rtd_theme recommonmark
 
 ######################################################################################################
 #                           Stage: jenkins                                                           #
 ######################################################################################################
 FROM dev as jenkins
 
+ARG JENKINS_PW
+
+ENV LC_CTYPE en_US.UTF-8
+ENV LANG en_US.UTF-8
+
+
 #install jenkins dependencies
-RUN apt install apt install -qq -y --no-install-recommends openjdk-8-jdk  openssh-server ca-certificates
+RUN apt install -qq -y --no-install-recommends openjdk-8-jdk  openssh-server ca-certificates
 RUN adduser --quiet jenkins && \
     echo "jenkins:$JENKINS_PW" | chpasswd && \
     mkdir /home/jenkins/.m2 && \
