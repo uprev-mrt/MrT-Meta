@@ -24,7 +24,7 @@ Home
 .. tocTree::
    :hidden:
    :titlesonly:
-   :caption: Modules
+   :caption: Module Reference
 
    modules
 
