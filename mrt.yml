@@ -88,14 +88,23 @@ Fifo:
   requires: []
   url: https://bitbucket.org/uprev/utility-fifo.git
 GattServer:
+  category: Utility/interface
+  description: Gatt Server back end code for integrating with mrt-ble
   doc: Modules/Utilities/Interfaces/GattServer/README.md
   name: GattServer
   path: Modules/Utilities/Interfaces/GattServer
+  requires:
+  - Platform
   url: https://bitbucket.org/uprev/device-gatt-server.git
 HTS221:
+  category: Device/Sensor
+  description: Humidity and Temperature Sensor
   doc: Modules/Devices/Sensors/HTS221/README.md
   name: HTS221
   path: Modules/Devices/Sensors/HTS221
+  requires:
+  - RegDevice
+  - Platform
   url: https://bitbucket.org/uprev/device-hts221.git
 JSON:
   doc: Modules/Utilities/JSON/README.md
@@ -151,9 +160,13 @@ RegDevice:
   - Platform
   url: https://bitbucket.org/uprev/device-regdevice.git
 SHT31:
+  category: Device/Sensor
+  description: description
   doc: Modules/Devices/Sensors/SHT31/README.md
   name: SHT31
   path: Modules/Devices/Sensors/SHT31
+  requires:
+  - RegDevice
   url: https://bitbucket.org/uprev/device-sht31.git
 SSD1306:
   doc: Modules/Devices/Displays/SSD1306/README.md
@@ -161,9 +174,13 @@ SSD1306:
   path: Modules/Devices/Displays/SSD1306
   url: https://bitbucket.org/uprev/device-ssd1306.git
 STC3117:
+  category: Device/Power
+  description: Gas gauge IC with battery charger control
   doc: Modules/Devices/Power/STC3117/README.md
   name: STC3117
   path: Modules/Devices/Power/STC3117
+  requires:
+  - RegDevice
   url: https://bitbucket.org/uprev/device-stc3117.git
 STM32:
   category: Platform
@@ -175,14 +192,22 @@ STM32:
   - Platform
   url: https://bitbucket.org/uprev/platform-stm32.git
 STM8-Expander:
+  category: Device/IO
+  description: Driver for STM8 running custom GPIO expander firmware
   doc: Modules/Devices/IO/STM8-Expander/README.md
   name: STM8-Expander
   path: Modules/Devices/IO/STM8-Expander
+  requires:
+  - RegDevice
   url: https://bitbucket.org/uprev/device-stm8-expander.git
 STSPIN220:
+  category: Device/MotorDriver
+  desc: Low voltage stepper motor driver
   doc: Modules/Devices/MotorDrivers/STSPIN220/README.md
   name: STSPIN220
   path: Modules/Devices/MotorDrivers/STSPIN220
+  requires:
+  - Platform
   url: https://bitbucket.org/uprev/device-stspin220.git
 Spartan6:
   author: Jason Berger
@@ -239,14 +264,20 @@ TriColorE-Ink:
   - MonoGfx
   url: https://bitbucket.org/uprev/device-eink_tri.git
 VL53L0x:
+  category: Device/Sensor
   doc: Modules/Devices/Sensors/VL53L0x/README.md
   name: VL53L0x
   path: Modules/Devices/Sensors/VL53L0x
+  requires: []
   url: https://bitbucket.org/uprev/device-vl53l0x.git
 WM8731:
+  category: Device/Audio
+  description: Aduio codec
   doc: Modules/Devices/Audio/WM8731/README.md
   name: WM8731
   path: Modules/Devices/Audio/WM8731
+  requires:
+  - RegDevice
   url: https://bitbucket.org/uprev/device-wm8731.git
 xCoder:
   category: Utility/Audio
