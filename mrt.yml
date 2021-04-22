@@ -1,68 +1,32 @@
 Atmel:
-  category: Platform
-  description: Abstraction layer for ESP32 series MCUs
-  doc: Modules/Platforms/Atmel/README.md
   name: Atmel
   path: Modules/Platforms/Atmel
-  requires:
-  - Platform
   url: https://bitbucket.org/uprev/platform-atmel.git
 BQ28Z:
-  author: Jason Berger
-  category: Device/Power
-  created: 01/30/2020
-  datasheet: http://www.ti.com/lit/ds/symlink/bq28z610.pdf
-  description: Battery Fuel Gauge
-  digikey_pn: 296-43394-1-ND
-  doc: Modules/Devices/Power/BQ28Z/README.md
-  docs:
-  - manual: http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=sluua65&fileType=pdf
-  mfg: Texas Instruments
-  mfg_pn: BQ28Z610DRZT
   name: BQ28Z
   path: Modules/Devices/Power/BQ28Z
-  requires: []
   url: https://bitbucket.org/uprev/device-bq28zxxx.git
 ByteFifo:
-  category: utility
-  description: simplified byte fifo utility
-  doc: Modules/Utilities/ByteFifo/README.md
   name: ByteFifo
   path: Modules/Utilities/ByteFifo
-  requires: []
   url: https://bitbucket.org/uprev/utility-byte_fifo.git
 COBS:
-  doc: Modules/Utilities/COBS/README.md
   name: COBS
   path: Modules/Utilities/COBS
   url: https://bitbucket.org/uprev/utility-cobs.git
 ColorGfx:
-  category: utility
-  description: generic Module for  graphics buffering
-  doc: Modules/Utilities/GFX/ColorGfx/README.md
   name: ColorGfx
   path: Modules/Utilities/GFX/ColorGfx
-  requires: []
   url: https://bitbucket.org/uprev/utilities-colorgfx.git
 Common:
-  category: Platform
-  description: Common platform abstraction layer
-  doc: Modules/Platforms/Common/README.md
   name: Common
   path: Modules/Platforms/Common
-  requires: []
   url: https://bitbucket.org/uprev/platform-common.git
 ESP32:
-  category: Platform
-  description: Abstraction layer for linux systems
-  doc: Modules/Platforms/ESP32/README.md
   name: ESP32
   path: Modules/Platforms/ESP32
-  requires:
-  - Platform
   url: https://bitbucket.org/uprev/platform-esp32.git
 Eeprom:
-  doc: Modules/Devices/Memory/Eeprom/README.md
   name: Eeprom
   path: Modules/Devices/Memory/Eeprom
   url: https://bitbucket.org/uprev/device-eeprom.git
@@ -80,93 +44,52 @@ ErcMonoLcd:
   - MonoGfx
   url: https://bitbucket.org/uprev/device-ercxxlcd.git
 Fifo:
-  category: utility
-  description: generic fifo utility
-  doc: Modules/Utilities/Fifo/README.md
   name: Fifo
   path: Modules/Utilities/Fifo
-  requires: []
   url: https://bitbucket.org/uprev/utility-fifo.git
 GattServer:
-  category: Utility/interface
-  description: Gatt Server back end code for integrating with mrt-ble
-  doc: Modules/Utilities/Interfaces/GattServer/README.md
   name: GattServer
   path: Modules/Utilities/Interfaces/GattServer
-  requires:
-  - Platform
   url: https://bitbucket.org/uprev/device-gatt-server.git
 HTS221:
-  category: Device/Sensor
-  description: Humidity and Temperature Sensor
-  doc: Modules/Devices/Sensors/HTS221/README.md
   name: HTS221
   path: Modules/Devices/Sensors/HTS221
-  requires:
-  - RegDevice
-  - Platform
   url: https://bitbucket.org/uprev/device-hts221.git
 JSON:
-  doc: Modules/Utilities/JSON/README.md
   name: JSON
   path: Modules/Utilities/JSON
   url: https://bitbucket.org/uprev/utility-json.git
 LIS2DH12:
-  doc: Modules/Devices/Sensors/LIS2DH12/README.md
   name: LIS2DH12
   path: Modules/Devices/Sensors/LIS2DH12
   url: https://bitbucket.org/uprev/device-lis2dh12.git
 LSM6D:
-  doc: Modules/Devices/Sensors/LSM6D/README.md
   name: LSM6D
   path: Modules/Devices/Sensors/LSM6D
   url: https://bitbucket.org/uprev/device-lsm6d.git
 Linux:
-  category: Platform
-  description: Abstraction layer for Atmel series MCUs
-  doc: Modules/Platforms/Linux/README.md
   name: Linux
   path: Modules/Platforms/Linux
-  requires:
-  - Platform
   url: https://bitbucket.org/uprev/platform-linux.git
 MonoGfx:
-  doc: Modules/Utilities/GFX/MonoGfx/README.md
   name: MonoGfx
   path: Modules/Utilities/GFX/MonoGfx
   url: https://bitbucket.org/uprev/utilities-monogfx.git
 Nrf24:
-  doc: Modules/Devices/RF/Nrf24/README.md
   name: Nrf24
   path: Modules/Devices/RF/Nrf24
   url: https://bitbucket.org/uprev/device-nrf24.git
 PolyPacket:
-  category: utility
-  description: polymorphic messaging framework
-  doc: Modules/Utilities/PolyPacket/README.md
   name: PolyPacket
   path: Modules/Utilities/PolyPacket
-  requires:
-  - COBS
-  - JSON
   url: https://bitbucket.org/uprev/utility-polypacket.git
 RegDevice:
-  category: Device
-  description: Base class for register based devices
-  doc: Modules/Devices/RegDevice/README.md
   name: RegDevice
   path: Modules/Devices/RegDevice
-  requires:
-  - Platform
   url: https://bitbucket.org/uprev/device-regdevice.git
 SHT31:
-  category: Device/Sensor
-  description: description
-  doc: Modules/Devices/Sensors/SHT31/README.md
   name: SHT31
   path: Modules/Devices/Sensors/SHT31
-  requires:
-  - RegDevice
   url: https://bitbucket.org/uprev/device-sht31.git
 SSD1306:
   doc: Modules/Devices/Displays/SSD1306/README.md
@@ -174,40 +97,20 @@ SSD1306:
   path: Modules/Devices/Displays/SSD1306
   url: https://bitbucket.org/uprev/device-ssd1306.git
 STC3117:
-  category: Device/Power
-  description: Gas gauge IC with battery charger control
-  doc: Modules/Devices/Power/STC3117/README.md
   name: STC3117
   path: Modules/Devices/Power/STC3117
-  requires:
-  - RegDevice
   url: https://bitbucket.org/uprev/device-stc3117.git
 STM32:
-  category: Platform
-  description: Abstraction layer for STM32 series MCUs
-  doc: Modules/Platforms/STM32/README.md
   name: STM32
   path: Modules/Platforms/STM32
-  requires:
-  - Platform
   url: https://bitbucket.org/uprev/platform-stm32.git
 STM8-Expander:
-  category: Device/IO
-  description: Driver for STM8 running custom GPIO expander firmware
-  doc: Modules/Devices/IO/STM8-Expander/README.md
   name: STM8-Expander
   path: Modules/Devices/IO/STM8-Expander
-  requires:
-  - RegDevice
   url: https://bitbucket.org/uprev/device-stm8-expander.git
 STSPIN220:
-  category: Device/MotorDriver
-  desc: Low voltage stepper motor driver
-  doc: Modules/Devices/MotorDrivers/STSPIN220/README.md
   name: STSPIN220
   path: Modules/Devices/MotorDrivers/STSPIN220
-  requires:
-  - Platform
   url: https://bitbucket.org/uprev/device-stspin220.git
 Spartan6:
   author: Jason Berger
@@ -224,31 +127,16 @@ Spartan6:
   requires: []
   url: https://bitbucket.org/uprev/device-spartan6.git
 SpiFlash:
-  author: Jason Berger
-  category: Device/Memory
-  created: 01/30/2020
-  datasheet: http://www.adestotech.com/wp-content/uploads/DS-AT25SF041_044.pdf
-  description: Spi flash IC
-  digikey_pn: 1265-1173-5-ND
-  doc: Modules/Devices/Memory/SpiFlash/README.md
-  mfg: Adesto
-  mfg_pn: AT25SF041-SHD-B
   name: SpiFlash
   path: Modules/Devices/Memory/SpiFlash
-  requires: []
   url: https://bitbucket.org/uprev/device-spiflash.git
 Test:
-  doc: Test/README.md
   name: Test
   path: Test
   url: https://bitbucket.org/uprev/test.git
 TestData:
-  category: Utility/Audio
-  description: Audio testing Utility with signal generation and test data
-  doc: Modules/Utilities/Audio/TestData/README.md
   name: TestData
   path: Modules/Utilities/Audio/TestData
-  requires: []
   url: https://bitbucket.org/uprev/utility-audio-test.git
 TriColorE-Ink:
   author: Jason Berger
@@ -264,11 +152,8 @@ TriColorE-Ink:
   - MonoGfx
   url: https://bitbucket.org/uprev/device-eink_tri.git
 VL53L0x:
-  category: Device/Sensor
-  doc: Modules/Devices/Sensors/VL53L0x/README.md
   name: VL53L0x
   path: Modules/Devices/Sensors/VL53L0x
-  requires: []
   url: https://bitbucket.org/uprev/device-vl53l0x.git
 WM8731:
   category: Device/Audio
@@ -280,10 +165,6 @@ WM8731:
   - RegDevice
   url: https://bitbucket.org/uprev/device-wm8731.git
 xCoder:
-  category: Utility/Audio
-  description: Audio encoding/decoding Utility
-  doc: Modules/Utilities/Audio/xCoder/README.md
   name: xCoder
   path: Modules/Utilities/Audio/xCoder
-  requires: []
   url: https://bitbucket.org/uprev/utility-AudioXcoder.git
