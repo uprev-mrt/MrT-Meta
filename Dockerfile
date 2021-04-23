@@ -29,7 +29,8 @@ RUN apt update -qq && apt install -qq -y --no-install-recommends \
         python3-pip\
         gdb \
         python3-setuptools \ 
-        locales
+        locales \
+        astyle
 
 #For Ubuntu Versions older than 20.04, the gtest lib must be built and installed manually for CMake integration
 WORKDIR /usr/src/gtest

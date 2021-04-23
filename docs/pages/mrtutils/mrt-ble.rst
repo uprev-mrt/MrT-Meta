@@ -95,7 +95,7 @@ Custom Characteristics must have a ``type``. this can be any of the following
 | Array    | specified with             |
 |          | <type>*<size>              |
 |          | ex: uint16*32 is an array  |
-|          | of 64 uint16 values        |
+|          | of 32 uint16 values        |
 +----------+----------------------------+
 
 

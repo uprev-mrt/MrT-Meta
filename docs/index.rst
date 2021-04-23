@@ -31,8 +31,10 @@ Home
 
 .. toctree:: 
    :hidden: 
+   :titlesonly:
    :caption: Contributing 
 
+   pages/contributing/architecture
    pages/contributing/adding_modules 
    pages/contributing/coding_practices
 
