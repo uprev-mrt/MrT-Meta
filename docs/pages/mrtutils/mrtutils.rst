@@ -14,4 +14,5 @@ mrtutils
    mrt-config
    mrt-device
    mrt-ble
+   mrt-version
    mrt-doc
