@@ -36,7 +36,7 @@ This will create the header file, with the initial version set to 0.0.0.0
 Updating the Version 
 --------------------
 
-After the initial file is created, you can set specific parts with the command line arguments (--major,--minor,--patch, --build). You can set these to a specific value, or increment them.
+After the initial file is created, you can set specific parts with the command line arguments (--major,--minor,--patch, --build). These values can be set to a value or incremented by a value. ``Minor`` and ``Patch`` can also be set to ``auto``. ``auto`` will count the number of commits since the parent portion was last updated. i.e. If ``Patch`` is set to ``auto`` it will count the number of commits on the master branch since ``Minor`` was last updated, and use that count as the new value for ``Patch``
 
 
 .. code-block:: bash 
@@ -57,6 +57,23 @@ After the initial file is created, you can set specific parts with the command l
 
 
 .. note:: Incrementing ``Minor`` will reset ``Patch`` to 0, and incrementing ``Major`` will reset ``Minor`` and ``Patch`` to 0. 
+
+
+Auto 
+~~~~
+
+``Minor`` and ``Patch`` can also be set to ``auto``. ``auto`` will count the number of commits since the parent portion was last updated. i.e. If ``Patch`` is set to ``auto`` it will count the number of commits on the master branch since ``Minor`` was last updated, and use that count as the new value for ``Patch``
+
+example: 
+
+.. image:: ../../images/git_tree_auto.png
+
+.. code-block:: bash 
+
+    mrt-version inc/version.h --patch auto 
+
+This would change the version to v0.1.4 since there have been 4 commits to the master branch since the ``Minor`` was incremented at the v0.1.0 tag
+
 
 
 Build System/Webhook integration
