@@ -3,7 +3,7 @@ Architecture
 
 At its core ``MrT`` is just a git repository that contains a bunch of reusable submodules. mrt-config_ is just a tool that lets you browse submodules from that repo remotely, and add them to your own repo. 
 
-
+.. image:: ../../diagrams/architecture.dio.png
 
 Custom Remotes
 --------------
