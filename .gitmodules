@@ -101,3 +101,6 @@
 [submodule "Modules/Utilities/GFX/ColorGfx"]
 	path = Modules/Utilities/GFX/ColorGfx
 	url = https://bitbucket.org/uprev/utilities-colorgfx.git
+[submodule "Modules/Devices/Power/STWLC68"]
+	path = Modules/Devices/Power/STWLC68
+	url = git@bitbucket.org:uprev/device-stwlc68.git
