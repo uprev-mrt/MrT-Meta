@@ -211,6 +211,14 @@ STSPIN220:
   requires:
   - Platform
   url: https://bitbucket.org/uprev/device-stspin220.git
+STWLC68:
+  category: Device/Power
+  doc: Modules/Devices/Power/STWLC68/README.md
+  name: STWLC68
+  path: Modules/Devices/Power/STWLC68
+  requires:
+  - RegDevice
+  url: https://bitbucket.org/uprev/device-stwlc68.git
 Spartan6:
   author: Jason Berger
   category: Device/FPGA
