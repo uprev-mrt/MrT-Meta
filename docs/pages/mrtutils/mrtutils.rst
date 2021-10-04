@@ -16,3 +16,4 @@ mrtutils
    mrt-ble
    mrt-version
    mrt-doc
+   mrt-gen
