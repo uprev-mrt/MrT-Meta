@@ -104,3 +104,6 @@
 [submodule "Modules/Devices/Power/STWLC68"]
 	path = Modules/Devices/Power/STWLC68
 	url = https://bitbucket.org/uprev/device-stwlc68.git
+[submodule "Modules/Devices/Biometric/ANV401-FingerprintSensor"]
+	path = Modules/Devices/Biometric/ANV401-FingerprintSensor
+	url = https://bitbucket.org/uprev/device-anv401.git
