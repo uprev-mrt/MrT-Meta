@@ -13,4 +13,5 @@ Devices
 	Audio/index
 	MotorDrivers/index
 	IO/index
+	Biometric/index
 	RegDevice/README

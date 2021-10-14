@@ -1,3 +1,14 @@
+ANV401-FingerprintSensor:
+  author: Jason Berger
+  category: Device/Biometric
+  description: Driver for ANV401 based capactive fingerprint sensor
+  doc: Modules/Devices/Biometric/ANV401-FingerprintSensor/README.md
+  docs:
+  - manual: https://www.waveshare.com/wiki/UART_Fingerprint_Sensor_(C)
+  name: ANV401-FingerprintSensor
+  path: Modules/Devices/Biometric/ANV401-FingerprintSensor
+  requires: []
+  url: https://bitbucket.org/uprev/device-anv401.git
 Atmel:
   category: Platform
   description: Abstraction layer for ESP32 series MCUs
