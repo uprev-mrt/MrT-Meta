@@ -1,3 +1,8 @@
 {
-    "restructuredtext.confPath": "${workspaceFolder}/docs"
+    "restructuredtext.confPath": "${workspaceFolder}\\docs",
+    "files.associations": {
+        "cstddef": "cpp",
+        "limits": "cpp",
+        "xutility": "cpp"
+    }
 }
