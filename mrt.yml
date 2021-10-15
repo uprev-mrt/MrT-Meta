@@ -108,7 +108,7 @@ GattServer:
   path: Modules/Utilities/Interfaces/GattServer
   requires:
   - Platform
-  url: https://bitbucket.org/uprev/device-gatt-server.git
+  url: https://bitbucket.org/uprev/utility-gatt-interface.git
 HTS221:
   category: Device/Sensor
   description: Humidity and Temperature Sensor
