@@ -107,3 +107,6 @@
 [submodule "Modules/Utilities/Interfaces/GattInterface"]
 	path = Modules/Utilities/Interfaces/GattInterface
 	url = https://bitbucket.org/uprev/utility-gatt-interface.git
+[submodule "Examples/BLE/Esp32GattStandalone"]
+	path = Examples/BLE/Esp32GattStandalone
+	url = https://github.com/uprev-mrt/example-esp32-gatt-standalone.git
