@@ -4,4 +4,4 @@ Interfaces
 	:caption: Interfaces
 	:titlesonly:
 
-	GattServer/README
+	GattInterface/README

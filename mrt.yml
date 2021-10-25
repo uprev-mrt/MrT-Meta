@@ -92,6 +92,11 @@ ErcMonoLcd:
   requires:
   - MonoGfx
   url: https://bitbucket.org/uprev/device-ercxxlcd.git
+Esp32GattStandalone:
+  doc: Examples/BLE/Esp32GattStandalone/README.md
+  name: Esp32GattStandalone
+  path: Examples/BLE/Esp32GattStandalone
+  url: https://github.com/uprev-mrt/example-esp32-gatt-standalone.git
 Fifo:
   category: utility
   description: generic fifo utility
@@ -100,12 +105,12 @@ Fifo:
   path: Modules/Utilities/Fifo
   requires: []
   url: https://bitbucket.org/uprev/utility-fifo.git
-GattServer:
+GattInterface:
   category: Utility/interface
   description: Gatt Server back end code for integrating with mrt-ble
-  doc: Modules/Utilities/Interfaces/GattServer/README.md
-  name: GattServer
-  path: Modules/Utilities/Interfaces/GattServer
+  doc: Modules/Utilities/Interfaces/GattInterface/README.md
+  name: GattInterface
+  path: Modules/Utilities/Interfaces/GattInterface
   requires:
   - Platform
   url: https://bitbucket.org/uprev/utility-gatt-interface.git
