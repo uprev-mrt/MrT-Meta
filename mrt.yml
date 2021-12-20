@@ -79,9 +79,18 @@ ESP32:
   - Platform
   url: https://bitbucket.org/uprev/platform-esp32.git
 Eeprom:
+  author: Jason Berger
+  bus:
+  - I2C
+  - SPI
+  category: Device/Memory
+  created: 01/30/2020
+  description: Generic I2C/SPI Eeprom Memory
   doc: Modules/Devices/Memory/Eeprom/README.md
   name: Eeprom
   path: Modules/Devices/Memory/Eeprom
+  requires:
+  - Platform
   url: https://bitbucket.org/uprev/device-eeprom.git
 ErcMonoLcd:
   author: Jason Berger
@@ -97,7 +106,6 @@ ErcMonoLcd:
   - MonoGfx
   url: https://bitbucket.org/uprev/device-ercxxlcd.git
 Esp32GattStandalone:
-  doc: Examples/BLE/Esp32GattStandalone/README.md
   name: Esp32GattStandalone
   path: Examples/BLE/Esp32GattStandalone
   url: https://github.com/uprev-mrt/example-esp32-gatt-standalone.git
