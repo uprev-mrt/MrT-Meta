@@ -20,6 +20,7 @@ Atmel:
   url: https://bitbucket.org/uprev/platform-atmel.git
 BQ28Z:
   author: Jason Berger
+  bus: I2C
   category: Device/Power
   created: 01/30/2020
   datasheet: http://www.ti.com/lit/ds/symlink/bq28z610.pdf
@@ -28,10 +29,13 @@ BQ28Z:
   doc: Modules/Devices/Power/BQ28Z/README.md
   docs:
   - manual: http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=sluua65&fileType=pdf
-  mfg: Texas Instruments
-  mfg_pn: BQ28Z610DRZT
+  i2c_addr: 170
+  manual: http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=sluua65&fileType=pdf
+  mfr: Texas Instruments
+  mfr_pn: BQ28Z610DRZT
   name: BQ28Z
   path: Modules/Devices/Power/BQ28Z
+  prefix: bq28z
   requires:
   - Platform
   - RegDev
@@ -86,7 +90,7 @@ ErcMonoLcd:
   datasheet: https://www.mikrocontroller.net/attachment/10245/SED1565.pdf
   description: Monochromatic display
   doc: Modules/Devices/Displays/ErcMonoLcd/README.md
-  mfg: mikrocontroller
+  mfr: mikrocontroller
   name: ErcMonoLcd
   path: Modules/Devices/Displays/ErcMonoLcd
   requires:
@@ -115,11 +119,20 @@ GattInterface:
   - Platform
   url: https://bitbucket.org/uprev/utility-gatt-interface.git
 HTS221:
+  ai_mask: 128
+  bus: I2C
   category: Device/Sensor
+  datasheet: https://www.st.com/content/ccc/resource/technical/document/datasheet/4d/9a/9c/ad/25/07/42/34/DM00116291.pdf/files/DM00116291.pdf/jcr:content/translations/en.DM00116291.pdf
   description: Humidity and Temperature Sensor
+  digikey_pn: 497-15382-1-ND
   doc: Modules/Devices/Sensors/HTS221/README.md
+  i2c_addr: 190
+  mfr: STMicroelectronics
+  mfr_pn: HTS221TR
   name: HTS221
+  package: custom
   path: Modules/Devices/Sensors/HTS221
+  prefix: HTS
   requires:
   - RegDevice
   - Platform
@@ -130,9 +143,19 @@ JSON:
   path: Modules/Utilities/JSON
   url: https://bitbucket.org/uprev/utility-json.git
 LIS2DH12:
+  bus: I2C,SPI
+  category: Device
+  datasheet: http://www.st.com/content/ccc/resource/technical/document/datasheet/12/c0/5c/36/b9/58/46/f2/DM00091513.pdf/files/DM00091513.pdf/jcr:content/translations/en.DM00091513.pdf
+  description: MEMS Digital Output Motion Sensor Ultra Low-Power High Performance
+    3-Axis "Femto" Accelerometer
+  digikey_pn: 497-14851-1-ND
   doc: Modules/Devices/Sensors/LIS2DH12/README.md
+  i2c_addr: 50
+  mfr: STMicroelectronics
+  mfr_pn: LIS2DH12TR
   name: LIS2DH12
   path: Modules/Devices/Sensors/LIS2DH12
+  prefix: lis
   url: https://bitbucket.org/uprev/device-lis2dh12.git
 LSM6D:
   doc: Modules/Devices/Sensors/LSM6D/README.md
@@ -178,11 +201,19 @@ RegDevice:
   - Platform
   url: https://bitbucket.org/uprev/device-regdevice.git
 SHT31:
+  addr_size: 2
+  bus: I2C
   category: Device/Sensor
+  datasheet: https://media.digikey.com/pdf/Data%20Sheets/Sensirion%20PDFs/HT_DS_SHT3x_DIS.pdf
   description: description
+  digikey_pn: 1649-1011-1-ND
   doc: Modules/Devices/Sensors/SHT31/README.md
+  i2c_addr: 68
+  mfr: Sensirion
+  mfr_pn: SHT31-DIS-B2.5KS
   name: SHT31
   path: Modules/Devices/Sensors/SHT31
+  prefix: sht
   requires:
   - RegDevice
   url: https://bitbucket.org/uprev/device-sht31.git
@@ -192,11 +223,20 @@ SSD1306:
   path: Modules/Devices/Displays/SSD1306
   url: https://bitbucket.org/uprev/device-ssd1306.git
 STC3117:
+  author: Jason Berger
+  bus: I2C
   category: Device/Power
+  created: 03/30/2020
+  datasheet: https://www.st.com/content/ccc/resource/technical/document/datasheet/ea/b5/01/6e/dd/f0/49/3e/DM00105047.pdf/files/DM00105047.pdf/jcr:content/translations/en.DM00105047.pdf
   description: Gas gauge IC with battery charger control
+  digikey_pn: 497-15387-1-ND
   doc: Modules/Devices/Power/STC3117/README.md
+  i2c_addr: 224
+  mfr: STMicroelectronics
+  mfr_pn: STC3117IJT
   name: STC3117
   path: Modules/Devices/Power/STC3117
+  prefix: stc
   requires:
   - RegDevice
   url: https://bitbucket.org/uprev/device-stc3117.git
@@ -210,28 +250,102 @@ STM32:
   - Platform
   url: https://bitbucket.org/uprev/platform-stm32.git
 STM8-Expander:
+  ADC_CFG:
+  - Treshold:
+      desc: IRQ threshold for ADC channel
+      mask: 65520
+  - IRQ:
+      desc: Interrupt setting for ADC channel
+      mask: 12
+      vals: &id001
+      - NONE:
+          desc: No interrupt
+          val: 0
+      - RISING:
+          desc: Trigger on Rising
+          val: 1
+      - FALLING:
+          desc: Trigger on falling
+          val: 2
+      - ANY:
+          desc: Trigger on any
+          val: 3
+  - EN:
+      desc: Enables ADC Channel
+      mask: 1
+  GPIO_CFG:
+  - DIR:
+      desc: Pin Direction
+      mask: 128
+      vals: &id002
+      - IN:
+          desc: GPIO is an input
+          val: 0
+      - OUT:
+          desc: GPIO is an output
+          val: 1
+  - PP:
+      desc: Enables Push/Pull, Otherwise pin is OpenDrain/floating
+      mask: 64
+  - IRQ:
+      desc: Interrupt selection
+      mask: 48
+      vals: *id001
+  - ALT:
+      desc: Indicates that GPIO is disabled because pin is being used for an alternate
+        function (PWM, ADC, etc)
+      mask: 8
+  - EN:
+      desc: Enables GPIO
+      mask: 1
+  bus: I2C, SPI
   category: Device/IO
+  datasheet: https://www.st.com/resource/en/datasheet/stm8s003f3.pdf
   description: Driver for STM8 running custom GPIO expander firmware
+  digikey_pn: 497-18052-2-ND
   doc: Modules/Devices/IO/STM8-Expander/README.md
+  gpio_dir_vals: *id002
+  i2c_addr: 66
+  irq_vals: *id001
+  mfr: UpRev
+  mfr_pn: STM8S003F3
   name: STM8-Expander
   path: Modules/Devices/IO/STM8-Expander
+  prefix: io
   requires:
   - RegDevice
   url: https://bitbucket.org/uprev/device-stm8-expander.git
 STSPIN220:
+  bus: GPIO
   category: Device/MotorDriver
+  datasheet: https://www.st.com/resource/en/datasheet/stspin220.pdf
   desc: Low voltage stepper motor driver
+  digikey_pn: 497-16602-1-ND
   doc: Modules/Devices/MotorDrivers/STSPIN220/README.md
+  mfr: STMicroelectronics
+  mfr_pn: STSPIN220
   name: STSPIN220
+  package: QFN16
   path: Modules/Devices/MotorDrivers/STSPIN220
+  prefix: spn
   requires:
   - Platform
   url: https://bitbucket.org/uprev/device-stspin220.git
 STWLC68:
+  author: Mark Bayless
+  bus: I2C
   category: Device/Power
+  created: 05/26/2021
+  datasheet: https://https://www.st.com/resource/en/datasheet/stwlc68.pdf
+  description: Wireless charger
+  digikey_pn: 497-STWLC68JRHTR-ND
   doc: Modules/Devices/Power/STWLC68/README.md
+  i2c_addr: 194
+  mfr: STMicroelectronics
+  mfr_pn: STWLC68JRH
   name: STWLC68
   path: Modules/Devices/Power/STWLC68
+  prefix: stw
   requires:
   - RegDevice
   url: https://bitbucket.org/uprev/device-stwlc68.git
@@ -243,8 +357,8 @@ Spartan6:
   description: FPGA
   digikey_pn: XC6SLX9-L1TQG144C-ND
   doc: Modules/Devices/FPGA/Spartan6/README.md
-  mfg: xilinx
-  mfg_pn: XC6SLX9-L1TQG144C
+  mfr: xilinx
+  mfr_pn: XC6SLX9-L1TQG144C
   name: Spartan6
   path: Modules/Devices/FPGA/Spartan6
   requires: []
@@ -257,8 +371,8 @@ SpiFlash:
   description: Spi flash IC
   digikey_pn: 1265-1173-5-ND
   doc: Modules/Devices/Memory/SpiFlash/README.md
-  mfg: Adesto
-  mfg_pn: AT25SF041-SHD-B
+  mfr: Adesto
+  mfr_pn: AT25SF041-SHD-B
   name: SpiFlash
   path: Modules/Devices/Memory/SpiFlash
   requires: []
@@ -283,7 +397,7 @@ TriColorE-Ink:
   datasheet: https://www.waveshare.com/w/upload/9/9e/1.54inch-e-paper-b-specification.pdf
   description: 3 Color e-ink display
   doc: Modules/Devices/Displays/TriColorE-Ink/README.md
-  mfg: waveshare
+  mfr: waveshare
   name: TriColorE-Ink
   path: Modules/Devices/Displays/TriColorE-Ink
   requires:
@@ -297,11 +411,21 @@ VL53L0x:
   requires: []
   url: https://bitbucket.org/uprev/device-vl53l0x.git
 WM8731:
+  author: Jason Berger
+  bus: I2C, SPI
   category: Device/Audio
+  created: 01/30/2020
+  datasheet: https://statics.cirrus.com/pubs/proDatasheet/WM8731_v4.9.pdf
   description: Aduio codec
+  digikey_pn: WM8731CSEFL-ND
   doc: Modules/Devices/Audio/WM8731/README.md
+  i2c_addr: 52
+  mfr: STMicroelectronics
+  mfr_pn: WM8731CLSEFL
   name: WM8731
+  package: QFN-28
   path: Modules/Devices/Audio/WM8731
+  prefix: wm
   requires:
   - RegDevice
   url: https://bitbucket.org/uprev/device-wm8731.git

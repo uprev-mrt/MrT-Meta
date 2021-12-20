@@ -69,8 +69,8 @@ device.yml:
 name: HTS221
 description: Humidity and Temperature Sensor 
 datasheet: https://www.st.com/content/ccc/resource/technical/document/datasheet/4d/9a/9c/ad/25/07/42/34/DM00116291.pdf/files/DM00116291.pdf/jcr:content/translations/en.DM00116291.pdf
-mfg: STMicroelectronics
-mfg_pn: HTS221TR
+mfr: STMicroelectronics
+mfr_pn: HTS221TR
 digikey_pn: 497-15382-1-ND
 ```
 

@@ -28,8 +28,8 @@ example from `hts221 driver <https://github.com/uprev-mrt/device-hts221>`_
     category: Device
     requires: [RegDevice,Platform]
     datasheet: https://www.st.com/content/ccc/resource/technical/document/datasheet/4d/9a/9c/ad/25/07/42/34/DM00116291.pdf/files/DM00116291.pdf/jcr:content/translations/en.DM00116291.pdf
-    mfg: STMicroelectronics
-    mfg_pn: HTS221TR
+    mfr: STMicroelectronics
+    mfr_pn: HTS221TR
     digikey_pn: 497-15382-1-ND
 
     prefix: HTS
@@ -118,8 +118,8 @@ The header of the descriptor file contains several Properties. ``name`` and ``de
 :name:          Name of device
 :description:   Description of device
 :datasheet:     url to public datasheet 
-:mfg:           Name of manufacturer
-:mfg_pn:        Manufacturer part number 
+:mfr:           Name of manufacturer
+:mfr_pn:        Manufacturer part number 
 :digikey_pn:    Digikey part number 
 
 :prefix:        prefix to append to struct and function names to prevent conflicts in projects
