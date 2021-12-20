@@ -1,10 +1,13 @@
 ANV401-FingerprintSensor:
   author: Jason Berger
+  bus: UART
   category: Device/Biometric
   description: Driver for ANV401 based capactive fingerprint sensor
   doc: Modules/Devices/Biometric/ANV401-FingerprintSensor/README.md
   docs:
   - manual: https://www.waveshare.com/wiki/UART_Fingerprint_Sensor_(C)
+  mfr: Waveshare
+  mfr_pn: ANV401
   name: ANV401-FingerprintSensor
   path: Modules/Devices/Biometric/ANV401-FingerprintSensor
   requires: []
@@ -80,9 +83,7 @@ ESP32:
   url: https://bitbucket.org/uprev/platform-esp32.git
 Eeprom:
   author: Jason Berger
-  bus:
-  - I2C
-  - SPI
+  bus: I2C, SPI
   category: Device/Memory
   created: 01/30/2020
   description: Generic I2C/SPI Eeprom Memory
