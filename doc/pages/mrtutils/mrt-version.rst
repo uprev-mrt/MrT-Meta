@@ -1,3 +1,5 @@
+.. _mrt-version-page:
+
 mrt-version
 ===========
 

@@ -1,3 +1,5 @@
+.. _mrt-doc-page:
+
 mrt-doc 
 =======
 

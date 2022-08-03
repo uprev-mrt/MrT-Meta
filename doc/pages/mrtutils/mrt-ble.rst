@@ -1,3 +1,5 @@
+.. _mrt-ble-page:
+
 mrt-ble 
 =======
 

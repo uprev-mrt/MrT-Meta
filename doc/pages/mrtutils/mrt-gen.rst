@@ -1,3 +1,5 @@
+.. _mrt-gen-page:
+
 mrt-gen 
 =======
 
