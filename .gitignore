@@ -9,6 +9,6 @@ CMakeFiles/
 
 build/
 
-docs/_build/
+doc/_build/
 
-docs/doxygen/
+doc/doxygen/

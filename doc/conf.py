@@ -17,9 +17,10 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'My Project'
-author = 'jason'
-
+project = 'MrT'
+copyright = '2021, Jason Berger'
+author = 'Jason Berger'
+html_favicon = 'images/favicon.ico'
 
 
 # -- General configuration ---------------------------------------------------
@@ -27,7 +28,7 @@ author = 'jason'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinxcontrib.plantuml']
+extensions = [ 'recommonmark']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -45,23 +46,21 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #
 html_theme = 'sphinx_rtd_theme'
 
-latex_elements = {
-  'extraclassoptions': 'openany,oneside'
-}
-
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 #html_static_path = ['_static']
 
-#html_logo = "images/logo.png"
+html_logo = "images/logo.png"
 
 html_theme_options = {
     "collapse_navigation" : False
 }
 
 source_suffix = {
-    '.rst': 'restructuredtext'
+    '.rst': 'restructuredtext',
+    '.txt': 'markdown',
+    '.md': 'markdown'
 }
 
 html_sidebars = {
@@ -74,3 +73,8 @@ html_sidebars = {
             ]
 
         }
+
+breathe_projects = { "test": "doxygen/xml" }
+
+breathe_default_project = "test" 
+

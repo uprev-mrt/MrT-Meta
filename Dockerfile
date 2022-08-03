@@ -13,6 +13,7 @@ ENV LANG en_US.UTF-8
 
 
 
+
 # Install system dependencies
 RUN apt update -qq && apt install -qq -y --no-install-recommends \
         gcc \
@@ -30,7 +31,16 @@ RUN apt update -qq && apt install -qq -y --no-install-recommends \
         gdb \
         python3-setuptools \ 
         locales \
-        astyle
+        astyle \
+        plantuml \
+        texlive \
+        latexmk \
+        texlive-science \
+        texlive-formats-extra \ 
+        tex-gyre 
+
+
+
 
 #For Ubuntu Versions older than 20.04, the gtest lib must be built and installed manually for CMake integration
 WORKDIR /usr/src/gtest
@@ -44,7 +54,11 @@ RUN adduser --quiet dev && \
     chown -R dev /home/dev 
 
 
-RUN pip3 install mrtutils Sphinx breathe sphinx_rtd_theme recommonmark 
+RUN pip3 install mrtutils Sphinx breathe sphinx_rtd_theme recommonmark sphinxcontrib-plantuml
+
+
+#Copy the latest release of plantuml. Ubuntu 18.04 package manager has an older one without timing diagram support
+RUN wget https://github.com/plantuml/plantuml/releases/download/v1.2022.1/plantuml-1.2022.1.jar -O /usr/share/plantuml/plantuml.jar
 
 ######################################################################################################
 #                           Stage: jenkins                                                           #
