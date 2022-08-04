@@ -23,7 +23,6 @@ Atmel:
   url: https://bitbucket.org/uprev/platform-atmel.git
 BQ28Z:
   author: Jason Berger
-  bus: I2C
   category: Device/Power
   created: 01/30/2020
   datasheet: http://www.ti.com/lit/ds/symlink/bq28z610.pdf
@@ -32,13 +31,10 @@ BQ28Z:
   doc: Modules/Devices/Power/BQ28Z/README.md
   docs:
   - manual: http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=sluua65&fileType=pdf
-  i2c_addr: 170
-  manual: http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=sluua65&fileType=pdf
   mfr: Texas Instruments
   mfr_pn: BQ28Z610DRZT
   name: BQ28Z
   path: Modules/Devices/Power/BQ28Z
-  prefix: bq28z
   requires:
   - Platform
   - RegDev
@@ -107,6 +103,7 @@ ErcMonoLcd:
   - MonoGfx
   url: https://bitbucket.org/uprev/device-ercxxlcd.git
 Esp32GattStandalone:
+  doc: Examples/BLE/Esp32GattStandalone/README.md
   name: Esp32GattStandalone
   path: Examples/BLE/Esp32GattStandalone
   url: https://github.com/uprev-mrt/example-esp32-gatt-standalone.git
@@ -341,20 +338,10 @@ STSPIN220:
   - Platform
   url: https://bitbucket.org/uprev/device-stspin220.git
 STWLC68:
-  author: Mark Bayless
-  bus: I2C
   category: Device/Power
-  created: 05/26/2021
-  datasheet: https://https://www.st.com/resource/en/datasheet/stwlc68.pdf
-  description: Wireless charger
-  digikey_pn: 497-STWLC68JRHTR-ND
   doc: Modules/Devices/Power/STWLC68/README.md
-  i2c_addr: 194
-  mfr: STMicroelectronics
-  mfr_pn: STWLC68JRH
   name: STWLC68
   path: Modules/Devices/Power/STWLC68
-  prefix: stw
   requires:
   - RegDevice
   url: https://bitbucket.org/uprev/device-stwlc68.git
