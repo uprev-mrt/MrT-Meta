@@ -92,9 +92,6 @@
 [submodule "Modules/Utilities/ByteFifo"]
 	path = Modules/Utilities/ByteFifo
 	url = https://bitbucket.org/uprev/utility-byte_fifo.git
-[submodule "Modules/Devices/IO/STM8-Expander"]
-	path = Modules/Devices/IO/STM8-Expander
-	url = https://bitbucket.org/uprev/device-stm8-expander.git
 [submodule "Modules/Utilities/GFX/ColorGfx"]
 	path = Modules/Utilities/GFX/ColorGfx
 	url = https://bitbucket.org/uprev/utilities-colorgfx.git
