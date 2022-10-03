@@ -109,4 +109,4 @@
 	url = https://github.com/uprev-mrt/example-esp32-gatt-standalone.git
 [submodule "Modules/Devices/IO/OpenExpander"]
 	path = Modules/Devices/IO/OpenExpander
-	url = git@bitbucket.org:uprev/device-opex.git
+	url = https://bitbucket.org/uprev/device-opex.git
