@@ -107,3 +107,6 @@
 [submodule "Examples/BLE/Esp32GattStandalone"]
 	path = Examples/BLE/Esp32GattStandalone
 	url = https://github.com/uprev-mrt/example-esp32-gatt-standalone.git
+[submodule "Modules/Devices/IO/OpenExpander"]
+	path = Modules/Devices/IO/OpenExpander
+	url = git@bitbucket.org:uprev/device-opex.git
