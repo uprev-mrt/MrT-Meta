@@ -187,6 +187,15 @@ Nrf24:
   name: Nrf24
   path: Modules/Devices/RF/Nrf24
   url: https://bitbucket.org/uprev/device-nrf24.git
+OpenExpander:
+  category: Device/IO
+  description: Driver for STM8 running custom GPIO expander firmware
+  doc: Modules/Devices/IO/OpenExpander/README.md
+  name: OpenExpander
+  path: Modules/Devices/IO/OpenExpander
+  requires:
+  - RegDevice
+  url: https://bitbucket.org/uprev/device-opex.git
 PolyPacket:
   category: utility
   description: polymorphic messaging framework
@@ -255,72 +264,6 @@ STM32:
   requires:
   - Platform
   url: https://bitbucket.org/uprev/platform-stm32.git
-STM8-Expander:
-  ADC_CFG:
-  - Treshold:
-      desc: IRQ threshold for ADC channel
-      mask: 65520
-  - IRQ:
-      desc: Interrupt setting for ADC channel
-      mask: 12
-      vals: &id001
-      - NONE:
-          desc: No interrupt
-          val: 0
-      - RISING:
-          desc: Trigger on Rising
-          val: 1
-      - FALLING:
-          desc: Trigger on falling
-          val: 2
-      - ANY:
-          desc: Trigger on any
-          val: 3
-  - EN:
-      desc: Enables ADC Channel
-      mask: 1
-  GPIO_CFG:
-  - DIR:
-      desc: Pin Direction
-      mask: 128
-      vals: &id002
-      - IN:
-          desc: GPIO is an input
-          val: 0
-      - OUT:
-          desc: GPIO is an output
-          val: 1
-  - PP:
-      desc: Enables Push/Pull, Otherwise pin is OpenDrain/floating
-      mask: 64
-  - IRQ:
-      desc: Interrupt selection
-      mask: 48
-      vals: *id001
-  - ALT:
-      desc: Indicates that GPIO is disabled because pin is being used for an alternate
-        function (PWM, ADC, etc)
-      mask: 8
-  - EN:
-      desc: Enables GPIO
-      mask: 1
-  bus: I2C, SPI
-  category: Device/IO
-  datasheet: https://www.st.com/resource/en/datasheet/stm8s003f3.pdf
-  description: Driver for STM8 running custom GPIO expander firmware
-  digikey_pn: 497-18052-2-ND
-  doc: Modules/Devices/IO/STM8-Expander/README.md
-  gpio_dir_vals: *id002
-  i2c_addr: 66
-  irq_vals: *id001
-  mfr: UpRev
-  mfr_pn: STM8S003F3
-  name: STM8-Expander
-  path: Modules/Devices/IO/STM8-Expander
-  prefix: io
-  requires:
-  - RegDevice
-  url: https://bitbucket.org/uprev/device-stm8-expander.git
 STSPIN220:
   bus: GPIO
   category: Device/MotorDriver
