@@ -106,3 +106,6 @@
 [submodule "Modules/Devices/IO/OpenExpander"]
 	path = Modules/Devices/IO/OpenExpander
 	url = git@github.com:uprev-mrt/device-opex.git
+[submodule "Modules/Utilities/GFX/Gfx"]
+	path = Modules/Utilities/GFX/Gfx
+	url = git@github.com:uprev-mrt/utility-gfx.git
