@@ -70,7 +70,6 @@
 [submodule "Modules/Devices/Audio/WM8731"]
 	path = Modules/Devices/Audio/WM8731
 	url = git@github.com:uprev-mrt/device-wm8731.git
-
 [submodule "Modules/Devices/Power/STC3117"]
 	path = Modules/Devices/Power/STC3117
 	url = git@github.com:uprev-mrt/device-stc3117.git
@@ -92,9 +91,6 @@
 [submodule "Modules/Utilities/ByteFifo"]
 	path = Modules/Utilities/ByteFifo
 	url = git@github.com:uprev-mrt/utility-byte-fifo.git
-[submodule "Modules/Utilities/GFX/Gfx"]
-	path = Modules/Utilities/GFX/Gfx
-	url = git@github.com:uprev-mrt/utility-gfx.git
 [submodule "Modules/Devices/Power/STWLC68"]
 	path = Modules/Devices/Power/STWLC68
 	url = git@github.com:uprev-mrt/device-stwlc68.git
