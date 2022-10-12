@@ -11,7 +11,7 @@ ANV401-FingerprintSensor:
   name: ANV401-FingerprintSensor
   path: Modules/Devices/Biometric/ANV401-FingerprintSensor
   requires: []
-  url: https://bitbucket.org/uprev/device-anv401.git
+  url: https://github.com/uprev-mrt/device-anv401.git
 Atmel:
   category: Platform
   description: Abstraction layer for ESP32 series MCUs
@@ -20,9 +20,10 @@ Atmel:
   path: Modules/Platforms/Atmel
   requires:
   - Platform
-  url: https://bitbucket.org/uprev/platform-atmel.git
+  url: https://github.com/uprev-mrt/platform-atmel.git
 BQ28Z:
   author: Jason Berger
+  bus: I2C
   category: Device/Power
   created: 01/30/2020
   datasheet: http://www.ti.com/lit/ds/symlink/bq28z610.pdf
@@ -31,14 +32,17 @@ BQ28Z:
   doc: Modules/Devices/Power/BQ28Z/README.md
   docs:
   - manual: http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=sluua65&fileType=pdf
+  i2c_addr: 170
+  manual: http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=sluua65&fileType=pdf
   mfr: Texas Instruments
   mfr_pn: BQ28Z610DRZT
   name: BQ28Z
   path: Modules/Devices/Power/BQ28Z
+  prefix: bq28z
   requires:
   - Platform
   - RegDev
-  url: https://bitbucket.org/uprev/device-bq28zxxx.git
+  url: https://github.com/uprev-mrt/device-bq28zxxx.git
 ByteFifo:
   category: utility
   description: simplified byte fifo utility
@@ -46,20 +50,12 @@ ByteFifo:
   name: ByteFifo
   path: Modules/Utilities/ByteFifo
   requires: []
-  url: https://bitbucket.org/uprev/utility-byte_fifo.git
+  url: https://github.com/uprev-mrt/utility-byte-fifo.git
 COBS:
   doc: Modules/Utilities/COBS/README.md
   name: COBS
   path: Modules/Utilities/COBS
-  url: https://bitbucket.org/uprev/utility-cobs.git
-ColorGfx:
-  category: utility
-  description: generic Module for  graphics buffering
-  doc: Modules/Utilities/GFX/ColorGfx/README.md
-  name: ColorGfx
-  path: Modules/Utilities/GFX/ColorGfx
-  requires: []
-  url: https://bitbucket.org/uprev/utilities-colorgfx.git
+  url: https://github.com/uprev-mrt/utility-cobs.git
 Common:
   category: Platform
   description: Common platform abstraction layer
@@ -67,7 +63,7 @@ Common:
   name: Common
   path: Modules/Platforms/Common
   requires: []
-  url: https://bitbucket.org/uprev/platform-common.git
+  url: https://github.com/uprev-mrt/platform-common.git
 ESP32:
   category: Platform
   description: Abstraction layer for linux systems
@@ -76,7 +72,7 @@ ESP32:
   path: Modules/Platforms/ESP32
   requires:
   - Platform
-  url: https://bitbucket.org/uprev/platform-esp32.git
+  url: https://github.com/uprev-mrt/platform-esp32.git
 Eeprom:
   author: Jason Berger
   bus: I2C, SPI
@@ -88,7 +84,7 @@ Eeprom:
   path: Modules/Devices/Memory/Eeprom
   requires:
   - Platform
-  url: https://bitbucket.org/uprev/device-eeprom.git
+  url: https://github.com/uprev-mrt/device-eeprom.git
 ErcMonoLcd:
   author: Jason Berger
   category: Device/Displays
@@ -101,7 +97,7 @@ ErcMonoLcd:
   path: Modules/Devices/Displays/ErcMonoLcd
   requires:
   - MonoGfx
-  url: https://bitbucket.org/uprev/device-ercxxlcd.git
+  url: https://github.com/uprev-mrt/device-ercxxlcd.git
 Esp32GattStandalone:
   doc: Examples/BLE/Esp32GattStandalone/README.md
   name: Esp32GattStandalone
@@ -114,7 +110,7 @@ Fifo:
   name: Fifo
   path: Modules/Utilities/Fifo
   requires: []
-  url: https://bitbucket.org/uprev/utility-fifo.git
+  url: https://github.com/uprev-mrt/utility-fifo.git
 GattInterface:
   category: Utility/interface
   description: Gatt Server back end code for integrating with mrt-ble
@@ -123,7 +119,15 @@ GattInterface:
   path: Modules/Utilities/Interfaces/GattInterface
   requires:
   - Platform
-  url: https://bitbucket.org/uprev/utility-gatt-interface.git
+  url: https://github.com/uprev-mrt/utility-gatt-interface.git
+Gfx:
+  category: utility
+  description: generic Module for  graphics buffering
+  doc: Modules/Utilities/GFX/Gfx/README.md
+  name: Gfx
+  path: Modules/Utilities/GFX/Gfx
+  requires: []
+  url: https://github.com/uprev-mrt/utility-gfx.git
 HTS221:
   ai_mask: 128
   bus: I2C
@@ -142,12 +146,12 @@ HTS221:
   requires:
   - RegDevice
   - Platform
-  url: https://bitbucket.org/uprev/device-hts221.git
+  url: https://github.com/uprev-mrt/device-hts221.git
 JSON:
   doc: Modules/Utilities/JSON/README.md
   name: JSON
   path: Modules/Utilities/JSON
-  url: https://bitbucket.org/uprev/utility-json.git
+  url: https://github.com/uprev-mrt/utility-json.git
 LIS2DH12:
   bus: I2C,SPI
   category: Device
@@ -162,12 +166,12 @@ LIS2DH12:
   name: LIS2DH12
   path: Modules/Devices/Sensors/LIS2DH12
   prefix: lis
-  url: https://bitbucket.org/uprev/device-lis2dh12.git
+  url: https://github.com/uprev-mrt/device-lis2dh12.git
 LSM6D:
   doc: Modules/Devices/Sensors/LSM6D/README.md
   name: LSM6D
   path: Modules/Devices/Sensors/LSM6D
-  url: https://bitbucket.org/uprev/device-lsm6d.git
+  url: https://github.com/uprev-mrt/device-lsm6d.git
 Linux:
   category: Platform
   description: Abstraction layer for Atmel series MCUs
@@ -176,17 +180,17 @@ Linux:
   path: Modules/Platforms/Linux
   requires:
   - Platform
-  url: https://bitbucket.org/uprev/platform-linux.git
+  url: https://github.com/uprev-mrt/platform-linux.git
 MonoGfx:
   doc: Modules/Utilities/GFX/MonoGfx/README.md
   name: MonoGfx
   path: Modules/Utilities/GFX/MonoGfx
-  url: https://bitbucket.org/uprev/utilities-monogfx.git
+  url: https://github.com/uprev-mrt/utility-MonoGfx.git
 Nrf24:
   doc: Modules/Devices/RF/Nrf24/README.md
   name: Nrf24
   path: Modules/Devices/RF/Nrf24
-  url: https://bitbucket.org/uprev/device-nrf24.git
+  url: https://github.com/uprev-mrt/device-nrf24.git
 OpenExpander:
   category: Device/IO
   description: Driver for STM8 running custom GPIO expander firmware
@@ -195,7 +199,7 @@ OpenExpander:
   path: Modules/Devices/IO/OpenExpander
   requires:
   - RegDevice
-  url: https://bitbucket.org/uprev/device-opex.git
+  url: https://github.com/uprev-mrt/device-opex.git
 PolyPacket:
   category: utility
   description: polymorphic messaging framework
@@ -205,7 +209,7 @@ PolyPacket:
   requires:
   - COBS
   - JSON
-  url: https://bitbucket.org/uprev/utility-polypacket.git
+  url: https://github.com/uprev-mrt/utility-polypacket.git
 RegDevice:
   category: Device
   description: Base class for register based devices
@@ -214,7 +218,7 @@ RegDevice:
   path: Modules/Devices/RegDevice
   requires:
   - Platform
-  url: https://bitbucket.org/uprev/device-regdevice.git
+  url: https://github.com/uprev-mrt/device-regdevice.git
 SHT31:
   addr_size: 2
   bus: I2C
@@ -231,12 +235,12 @@ SHT31:
   prefix: sht
   requires:
   - RegDevice
-  url: https://bitbucket.org/uprev/device-sht31.git
+  url: https://github.com/uprev-mrt/device-sht31.git
 SSD1306:
   doc: Modules/Devices/Displays/SSD1306/README.md
   name: SSD1306
   path: Modules/Devices/Displays/SSD1306
-  url: https://bitbucket.org/uprev/device-ssd1306.git
+  url: https://github.com/uprev-mrt/device-ssd1306.git
 STC3117:
   author: Jason Berger
   bus: I2C
@@ -254,7 +258,7 @@ STC3117:
   prefix: stc
   requires:
   - RegDevice
-  url: https://bitbucket.org/uprev/device-stc3117.git
+  url: https://github.com/uprev-mrt/device-stc3117.git
 STM32:
   category: Platform
   description: Abstraction layer for STM32 series MCUs
@@ -263,7 +267,7 @@ STM32:
   path: Modules/Platforms/STM32
   requires:
   - Platform
-  url: https://bitbucket.org/uprev/platform-stm32.git
+  url: https://github.com/uprev-mrt/platform-stm32.git
 STSPIN220:
   bus: GPIO
   category: Device/MotorDriver
@@ -279,15 +283,25 @@ STSPIN220:
   prefix: spn
   requires:
   - Platform
-  url: https://bitbucket.org/uprev/device-stspin220.git
+  url: https://github.com/uprev-mrt/device-stspin220.git
 STWLC68:
+  author: Mark Bayless
+  bus: I2C
   category: Device/Power
+  created: 05/26/2021
+  datasheet: https://https://www.st.com/resource/en/datasheet/stwlc68.pdf
+  description: Wireless charger
+  digikey_pn: 497-STWLC68JRHTR-ND
   doc: Modules/Devices/Power/STWLC68/README.md
+  i2c_addr: 194
+  mfr: STMicroelectronics
+  mfr_pn: STWLC68JRH
   name: STWLC68
   path: Modules/Devices/Power/STWLC68
+  prefix: stw
   requires:
   - RegDevice
-  url: https://bitbucket.org/uprev/device-stwlc68.git
+  url: https://github.com/uprev-mrt/device-stwlc68.git
 Spartan6:
   author: Jason Berger
   category: Device/FPGA
@@ -301,7 +315,7 @@ Spartan6:
   name: Spartan6
   path: Modules/Devices/FPGA/Spartan6
   requires: []
-  url: https://bitbucket.org/uprev/device-spartan6.git
+  url: https://github.com/uprev-mrt/device-spartan6.git
 SpiFlash:
   author: Jason Berger
   category: Device/Memory
@@ -315,12 +329,12 @@ SpiFlash:
   name: SpiFlash
   path: Modules/Devices/Memory/SpiFlash
   requires: []
-  url: https://bitbucket.org/uprev/device-spiflash.git
+  url: https://github.com/uprev-mrt/device-spiflash.git
 Test:
   doc: Test/README.md
   name: Test
   path: Test
-  url: https://bitbucket.org/uprev/test.git
+  url: https://github.com/uprev-mrt/test.git
 TestData:
   category: Utility/Audio
   description: Audio testing Utility with signal generation and test data
@@ -328,7 +342,7 @@ TestData:
   name: TestData
   path: Modules/Utilities/Audio/TestData
   requires: []
-  url: https://bitbucket.org/uprev/utility-audio-test.git
+  url: https://github.com/uprev-mrt/utility-audio-test.git
 TriColorE-Ink:
   author: Jason Berger
   category: Device/Displays
@@ -341,14 +355,14 @@ TriColorE-Ink:
   path: Modules/Devices/Displays/TriColorE-Ink
   requires:
   - MonoGfx
-  url: https://bitbucket.org/uprev/device-eink_tri.git
+  url: https://github.com/uprev-mrt/device-eink_tri.git
 VL53L0x:
   category: Device/Sensor
   doc: Modules/Devices/Sensors/VL53L0x/README.md
   name: VL53L0x
   path: Modules/Devices/Sensors/VL53L0x
   requires: []
-  url: https://bitbucket.org/uprev/device-vl53l0x.git
+  url: https://github.com/uprev-mrt/device-vl53l0x.git
 WM8731:
   author: Jason Berger
   bus: I2C, SPI
@@ -367,7 +381,7 @@ WM8731:
   prefix: wm
   requires:
   - RegDevice
-  url: https://bitbucket.org/uprev/device-wm8731.git
+  url: https://github.com/uprev-mrt/device-wm8731.git
 xCoder:
   category: Utility/Audio
   description: Audio encoding/decoding Utility
@@ -375,4 +389,4 @@ xCoder:
   name: xCoder
   path: Modules/Utilities/Audio/xCoder
   requires: []
-  url: https://bitbucket.org/uprev/utility-AudioXcoder.git
+  url: https://github.com/uprev-mrt/utility-AudioXcoder.git

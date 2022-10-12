@@ -27,4 +27,4 @@ example from ``Fifo`` module:
 
 Once you have the basic module added, you can begin adding code. The modules structure will vary based on what type of module it is. See below for specifics when adding a :ref:`Platform <adding_platforms>` , :ref:`Device <adding_devices>` , or :ref:`Utility <adding_utilities>` module
 
-.. _uprev-mrt : https://bitbucket.org/uprev/uprev-mrt/src/master/
+.. _uprev-mrt : https://github.com/uprev-mrt/MrT-Meta

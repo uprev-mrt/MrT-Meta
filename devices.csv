@@ -1,0 +1,21 @@
+Date Added,Category,Author,Manufacturer,MFR_PN,Interface,Verified,Description,Repo
+,Device,,,,,,Base class for register based devices,https://github.com/uprev-mrt/device-regdevice.git
+01/30/2020,Device/Displays,Jason Berger,mikrocontroller,,,,Monochromatic display,https://github.com/uprev-mrt/device-ercxxlcd.git
+,,,,,,,,https://github.com/uprev-mrt/device-lsm6d.git
+01/30/2020,Device/FPGA,Jason Berger,xilinx,XC6SLX9-L1TQG144C,,,FPGA,https://github.com/uprev-mrt/device-spartan6.git
+01/30/2020,Device/Memory,Jason Berger,Adesto,AT25SF041-SHD-B,,,Spi flash IC,https://github.com/uprev-mrt/device-spiflash.git
+01/30/2020,Device/Memory,Jason Berger,,,"I2C, SPI",,Generic I2C/SPI Eeprom Memory,https://github.com/uprev-mrt/device-eeprom.git
+01/30/2020,Device/Displays,Jason Berger,waveshare,,,,3 Color e-ink display,https://github.com/uprev-mrt/device-eink_tri.git
+01/30/2020,Device/Power,Jason Berger,Texas Instruments,BQ28Z610DRZT,I2C,,Battery Fuel Gauge,https://github.com/uprev-mrt/device-bq28zxxx.git
+,Device/Sensor,,STMicroelectronics,HTS221TR,I2C,,Humidity and Temperature Sensor,https://github.com/uprev-mrt/device-hts221.git
+,,,,,,,,https://github.com/uprev-mrt/device-nrf24.git
+01/30/2020,Device/Audio,Jason Berger,STMicroelectronics,WM8731CLSEFL,"I2C, SPI",,Aduio codec,https://github.com/uprev-mrt/device-wm8731.git
+03/30/2020,Device/Power,Jason Berger,STMicroelectronics,STC3117IJT,I2C,,Gas gauge IC with battery charger control,https://github.com/uprev-mrt/device-stc3117.git
+,Device/Sensor,,Sensirion,SHT31-DIS-B2.5KS,I2C,,description,https://github.com/uprev-mrt/device-sht31.git
+,Device,,STMicroelectronics,LIS2DH12TR,"I2C,SPI",,"MEMS Digital Output Motion Sensor Ultra Low-Power High Performance 3-Axis ""Femto"" Accelerometer",https://github.com/uprev-mrt/device-lis2dh12.git
+,Device/Sensor,,,,,,,https://github.com/uprev-mrt/device-vl53l0x.git
+,Device/MotorDriver,,STMicroelectronics,STSPIN220,GPIO,,,https://github.com/uprev-mrt/device-stspin220.git
+,,,,,,,,https://github.com/uprev-mrt/device-ssd1306.git
+05/26/2021,Device/Power,Mark Bayless,STMicroelectronics,STWLC68JRH,I2C,,Wireless charger,https://github.com/uprev-mrt/device-stwlc68.git
+,Device/Biometric,Jason Berger,Waveshare,ANV401,UART,,Driver for ANV401 based capactive fingerprint sensor,https://github.com/uprev-mrt/device-anv401.git
+,Device/IO,,,,,,Driver for STM8 running custom GPIO expander firmware,https://github.com/uprev-mrt/device-opex.git

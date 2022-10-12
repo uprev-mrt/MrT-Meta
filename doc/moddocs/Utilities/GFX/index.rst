@@ -5,4 +5,4 @@ GFX
 	:titlesonly:
 
 	MonoGfx/README
-	ColorGfx/README
+	Gfx/README

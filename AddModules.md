@@ -4,7 +4,7 @@
 
 This guide provides details on how to add modules to the Mr T framework.
 
-All MrT modules are [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules), so they are all standalone git repos which are just imported as submodules. To create a new module, first create a repo for it on bitbucket, under the [Mr.T project](https://bitbucket.org/account/user/uprev/projects/MRT)
+All MrT modules are [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules), so they are all standalone git repos which are just imported as submodules. To create a new module, first create a repo for it on Github, under the [Mr.T project](https://github.com/uprev-mrt)
 
 The naming convention is [module type]-[name]. for instance the fifo module is utility-fifo. 
 >*This is just the name of the repo, and does not have to be the same as the directory it is in*
@@ -22,7 +22,7 @@ category: utility
 requires: []
 ```
 
-Once you have created the repo, clone the [MrT Master repo](https://bitbucket.org/uprev/uprev-mrt/src/master/), and add the new repo as a submodule using a path that makes sense under the Modules directory 
+Once you have created the repo, clone the [MrT Meta repo](https://github.com/uprev-mrt/MrT-Meta), and add the new repo as a submodule using a path that makes sense under the Modules directory 
 
 ```bash
 git submodule add <url-for-module> Modules/path/for/module
@@ -41,7 +41,7 @@ Depending on the type of module, it may require other files and information
 Every utility module should have a unit test. Unit test files are automaticly collected by the Test module as long as they end in **_UT.cpp**. 
 
 
-For more information on creating this, look at the readme file for the [MrT Test](https://bitbucket.org/uprev/test/src/master/) module.
+For more information on creating this, look at the readme file for the [MrT Test](https://github.com/uprev-mrt/Test) module.
 
 
 

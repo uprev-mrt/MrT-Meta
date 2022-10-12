@@ -27,7 +27,7 @@ You should now have a folder called 'MrT' in your projects directory with the su
 
 Now you need to configure the project to use these submodules. Each platform module should have instructions in its README. 
 
-Here are the instructions from `STM32/README.md <https://bitbucket.org/uprev/platform-stm32/src/master/README.md>`_ :
+Here are the instructions from `STM32/README.md <https://github.com/uprev-mrt/platform-stm32/blob/master/README.rst>`_ :
 
 .. note:: after importing modules, right click the project and hit refresh so it sees the new directories
 

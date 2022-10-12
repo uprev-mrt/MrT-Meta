@@ -4,4 +4,4 @@ IO
 	:caption: IO
 	:titlesonly:
 
-	STM8-Expander/README
+	OpenExpander/README
