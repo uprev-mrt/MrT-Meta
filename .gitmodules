@@ -1,111 +1,111 @@
 [submodule "Modules/Platforms/Common"]
 	path = Modules/Platforms/Common
-	url = git@github.com:uprev-mrt/platform-common.git
+	url = https://github.com/uprev-mrt/platform-common.git
 [submodule "Test"]
 	path = Test
-	url = git@github.com:uprev-mrt/test.git
+	url = https://github.com/uprev-mrt/test.git
 [submodule "Modules/Utilities/Fifo"]
 	path = Modules/Utilities/Fifo
-	url = git@github.com:uprev-mrt/utility-fifo.git
+	url = https://github.com/uprev-mrt/utility-fifo.git
 [submodule "Modules/Devices/RegDevice"]
 	path = Modules/Devices/RegDevice
-	url = git@github.com:uprev-mrt/device-regdevice.git
+	url = https://github.com/uprev-mrt/device-regdevice.git
 [submodule "Modules/Utilities/PolyPacket"]
 	path = Modules/Utilities/PolyPacket
-	url = git@github.com:uprev-mrt/utility-polypacket.git
+	url = https://github.com/uprev-mrt/utility-polypacket.git
 [submodule "Modules/Devices/Displays/ErcMonoLcd"]
 	path = Modules/Devices/Displays/ErcMonoLcd
-	url = git@github.com:uprev-mrt/device-ercxxlcd.git
+	url = https://github.com/uprev-mrt/device-ercxxlcd.git
 [submodule "Modules/Platforms/STM32"]
 	path = Modules/Platforms/STM32
-	url = git@github.com:uprev-mrt/platform-stm32.git
+	url = https://github.com/uprev-mrt/platform-stm32.git
 [submodule "Modules/Platforms/Atmel"]
 	path = Modules/Platforms/Atmel
-	url = git@github.com:uprev-mrt/platform-atmel.git
+	url = https://github.com/uprev-mrt/platform-atmel.git
 [submodule "Modules/Devices/Sensors/LSM6D"]
 	path = Modules/Devices/Sensors/LSM6D
-	url = git@github.com:uprev-mrt/device-lsm6d.git
+	url = https://github.com/uprev-mrt/device-lsm6d.git
 [submodule "Modules/Devices/FPGA/Spartan6"]
 	path = Modules/Devices/FPGA/Spartan6
-	url = git@github.com:uprev-mrt/device-spartan6.git
+	url = https://github.com/uprev-mrt/device-spartan6.git
 [submodule "Modules/Devices/Memory/SpiFlash"]
 	path = Modules/Devices/Memory/SpiFlash
-	url = git@github.com:uprev-mrt/device-spiflash.git
+	url = https://github.com/uprev-mrt/device-spiflash.git
 [submodule "Modules/Devices/Memory/Eeprom"]
 	path = Modules/Devices/Memory/Eeprom
-	url = git@github.com:uprev-mrt/device-eeprom.git
+	url = https://github.com/uprev-mrt/device-eeprom.git
 [submodule "Modules/Devices/Displays/TriColorE-Ink"]
 	path = Modules/Devices/Displays/TriColorE-Ink
-	url = git@github.com:uprev-mrt/device-eink_tri.git
+	url = https://github.com/uprev-mrt/device-eink_tri.git
 [submodule "Modules/Utilities/GFX/MonoGfx"]
 	path = Modules/Utilities/GFX/MonoGfx
-	url = git@github.com:uprev-mrt/utility-MonoGfx.git
+	url = https://github.com/uprev-mrt/utility-MonoGfx.git
 [submodule "Modules/Devices/Power/BQ28Z"]
 	path = Modules/Devices/Power/BQ28Z
-	url = git@github.com:uprev-mrt/device-bq28zxxx.git
+	url = https://github.com/uprev-mrt/device-bq28zxxx.git
 [submodule "Modules/Utilities/JSON"]
 	path = Modules/Utilities/JSON
-	url = git@github.com:uprev-mrt/utility-json.git
+	url = https://github.com/uprev-mrt/utility-json.git
 [submodule "Modules/Platforms/ESP32"]
 	path = Modules/Platforms/ESP32
-	url = git@github.com:uprev-mrt/platform-esp32.git
+	url = https://github.com/uprev-mrt/platform-esp32.git
 [submodule "Modules/Platforms/Linux"]
 	path = Modules/Platforms/Linux
-	url = git@github.com:uprev-mrt/platform-linux.git
+	url = https://github.com/uprev-mrt/platform-linux.git
 [submodule "Modules/Utilities/COBS"]
 	path = Modules/Utilities/COBS
-	url = git@github.com:uprev-mrt/utility-cobs.git
+	url = https://github.com/uprev-mrt/utility-cobs.git
 [submodule "Modules/Devices/Sensors/HTS221"]
 	path = Modules/Devices/Sensors/HTS221
-	url = git@github.com:uprev-mrt/device-hts221.git
+	url = https://github.com/uprev-mrt/device-hts221.git
 [submodule "Modules/Utilities/Audio/xCoder"]
 	path = Modules/Utilities/Audio/xCoder
-	url = git@github.com:uprev-mrt/utility-AudioXcoder.git
+	url = https://github.com/uprev-mrt/utility-AudioXcoder.git
 [submodule "Modules/Utilities/Audio/TestData"]
 	path = Modules/Utilities/Audio/TestData
-	url = git@github.com:uprev-mrt/utility-audio-test.git
+	url = https://github.com/uprev-mrt/utility-audio-test.git
 [submodule "Modules/Devices/RF/Nrf24"]
 	path = Modules/Devices/RF/Nrf24
-	url = git@github.com:uprev-mrt/device-nrf24.git
+	url = https://github.com/uprev-mrt/device-nrf24.git
 [submodule "Modules/Devices/Audio/WM8731"]
 	path = Modules/Devices/Audio/WM8731
-	url = git@github.com:uprev-mrt/device-wm8731.git
+	url = https://github.com/uprev-mrt/device-wm8731.git
 [submodule "Modules/Devices/Power/STC3117"]
 	path = Modules/Devices/Power/STC3117
-	url = git@github.com:uprev-mrt/device-stc3117.git
+	url = https://github.com/uprev-mrt/device-stc3117.git
 [submodule "Modules/Devices/Sensors/SHT31"]
 	path = Modules/Devices/Sensors/SHT31
-	url = git@github.com:uprev-mrt/device-sht31.git
+	url = https://github.com/uprev-mrt/device-sht31.git
 [submodule "Modules/Devices/Sensors/LIS2DH12"]
 	path = Modules/Devices/Sensors/LIS2DH12
-	url = git@github.com:uprev-mrt/device-lis2dh12.git
+	url = https://github.com/uprev-mrt/device-lis2dh12.git
 [submodule "Modules/Devices/Sensors/VL53L0x"]
 	path = Modules/Devices/Sensors/VL53L0x
-	url = git@github.com:uprev-mrt/device-vl53l0x.git
+	url = https://github.com/uprev-mrt/device-vl53l0x.git
 [submodule "Modules/Devices/MotorDrivers/STSPIN220"]
 	path = Modules/Devices/MotorDrivers/STSPIN220
-	url = git@github.com:uprev-mrt/device-stspin220.git
+	url = https://github.com/uprev-mrt/device-stspin220.git
 [submodule "Modules/Devices/Displays/SSD1306"]
 	path = Modules/Devices/Displays/SSD1306
-	url = git@github.com:uprev-mrt/device-ssd1306.git
+	url = https://github.com/uprev-mrt/device-ssd1306.git
 [submodule "Modules/Utilities/ByteFifo"]
 	path = Modules/Utilities/ByteFifo
-	url = git@github.com:uprev-mrt/utility-byte-fifo.git
+	url = https://github.com/uprev-mrt/utility-byte-fifo.git
 [submodule "Modules/Devices/Power/STWLC68"]
 	path = Modules/Devices/Power/STWLC68
-	url = git@github.com:uprev-mrt/device-stwlc68.git
+	url = https://github.com/uprev-mrt/device-stwlc68.git
 [submodule "Modules/Devices/Biometric/ANV401-FingerprintSensor"]
 	path = Modules/Devices/Biometric/ANV401-FingerprintSensor
-	url = git@github.com:uprev-mrt/device-anv401.git
+	url = https://github.com/uprev-mrt/device-anv401.git
 [submodule "Modules/Utilities/Interfaces/GattInterface"]
 	path = Modules/Utilities/Interfaces/GattInterface
-	url = git@github.com:uprev-mrt/utility-gatt-interface.git
+	url = https://github.com/uprev-mrt/utility-gatt-interface.git
 [submodule "Examples/BLE/Esp32GattStandalone"]
 	path = Examples/BLE/Esp32GattStandalone
 	url = https://github.com/uprev-mrt/example-esp32-gatt-standalone.git
 [submodule "Modules/Devices/IO/OpenExpander"]
 	path = Modules/Devices/IO/OpenExpander
-	url = git@github.com:uprev-mrt/device-opex.git
+	url = https://github.com/uprev-mrt/device-opex.git
 [submodule "Modules/Utilities/GFX/Gfx"]
 	path = Modules/Utilities/GFX/Gfx
-	url = git@github.com:uprev-mrt/utility-gfx.git
+	url = https://github.com/uprev-mrt/utility-gfx.git
