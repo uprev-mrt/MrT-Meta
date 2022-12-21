@@ -112,6 +112,6 @@
 [submodule "Modules/Platforms/NRF5"]
 	path = Modules/Platforms/NRF5
 	url = https://github.com/uprev-mrt/Platform-NRF5.git
-[submodule "Modules/Devices/Displays/ST727A"]
-	path = Modules/Devices/Displays/ST727A
-	url = https://github.com/uprev-mrt/device-st727a.git
+[submodule "Modules/Devices/Displays/ST7272A"]
+	path = Modules/Devices/Displays/ST7272A
+	url = https://github.com/uprev-mrt/device-st7272a.git
