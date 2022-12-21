@@ -109,3 +109,9 @@
 [submodule "Modules/Utilities/GFX/Gfx"]
 	path = Modules/Utilities/GFX/Gfx
 	url = https://github.com/uprev-mrt/utility-gfx.git
+[submodule "Modules/Platforms/NRF5"]
+	path = Modules/Platforms/NRF5
+	url = https://github.com/uprev-mrt/Platform-NRF5.git
+[submodule "Modules/Devices/Displays/ST727A"]
+	path = Modules/Devices/Displays/ST727A
+	url = https://github.com/uprev-mrt/device-st727a.git
