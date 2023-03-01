@@ -1,0 +1,37 @@
+
+image: uprev/mrt 
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+stages:          # List of stages for jobs, and their order of execution
+  - gather
+  - build
+  - test
+
+gather-job:
+  stage: gather
+  tags: [mrt]
+  script: 
+    - git submodule foreach git pull origin master
+
+build-job:       # This job runs in the build stage, which runs first.
+  stage: build
+  tags: [mrt]   
+  artifacts:
+    paths:
+      - Test/build/runTests
+  script:
+    - mkdir Test/build
+    - cd Test/build
+    - cmake ..
+    - make
+
+unit-test-job:   # This job runs in the test stage.
+  stage: test    # It only starts when the job in the build stage completes successfully.
+  tags: [mrt]
+  script:
+    - ./Test/build/runTests --gtest_output="xml:Test/test-results.xml"
+  artifacts:
+    reports:
+      junit: Test/test-results.xml
