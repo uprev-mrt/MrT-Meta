@@ -55,7 +55,7 @@ unit-test-job:   # This job runs in the test stage.
 #
 
 commit-job:
-  tags: [*]
+  tags: [mrt]
   stage: commit
   before_script:
     - git config --global user.email "devops@uprev.com"
