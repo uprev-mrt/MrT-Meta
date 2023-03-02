@@ -8,7 +8,7 @@ stages:          # List of stages for jobs, and their order of execution
   - gather
   - build
   - test
-  - push 
+  - commit 
 
 #
 # Gathers all of the submodules and moves submodule head to head of master
@@ -53,6 +53,24 @@ unit-test-job:   # This job runs in the test stage.
 # If there are changes (i.e. updates in submodules or docs) push back to the repo
 # - This will trigger the docs to rebuild at mrt.readthedocs.io
 #
+
+commit-job:
+  stage: commit
+  before_script:
+    - git config --global user.email "devops@uprev.com"
+    - git config --global user.name "gitlab CI"
+  script:
+    - | 
+      CHANGES=$(git status --porcelain | wc -l)
+      if [[ "${CHANGES}" -gt 0 ]]; then
+        echo "Committing updated files to git"
+        git add executions.txt
+        git commit -m "Updated executions with new running date"
+        git push "https://${GITLAB_USER_NAME}:${CI_ACCESS_TOKEN}@${CI_REPOSITORY_URL#*@}" "HEAD:${CI_COMMIT_REF_NAME}" -o skip-ci
+      else
+        echo "Nothing to commit"
+      fi
+
 
 #TODO
 
