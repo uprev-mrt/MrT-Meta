@@ -5,37 +5,9 @@ variables:
   GIT_SUBMODULE_STRATEGY: recursive #pull submodules
 
 stages:          # List of stages for jobs, and their order of execution
-  - gather
-  - build
   - test
   - commit 
 
-#
-# Gathers all of the submodules and moves submodule head to head of master
-# - This is because submodules might get updates in other projects, and we want those reflected in the nightly test 
-#
-gather:
-  stage: gather
-  tags: [mrt]
-  script: 
-    - git submodule foreach git pull origin master
-
-
-#
-# Build the GTest Unit test
-#
-build:       # This job runs in the build stage, which runs first.
-  stage: build
-  tags: [mrt]   
-  script:
-    - mkdir Test/build
-    - cd Test/build
-    - cmake ..
-    - make
-  artifacts:
-    paths: 
-      - Test/build/*
-    expire_in: 1 week
 
 #
 # Run unit test and publish results
@@ -44,7 +16,12 @@ unit-test:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
   tags: [mrt]
   script:
-    - ./Test/build/runTests --gtest_output="xml:Test/test-results.xml"
+    - git submodule foreach git pull origin master #Update the submodule heads to latest commits on master
+    - mkdir Test/build  #build unit test
+    - cd Test/build
+    - cmake ..
+    - make
+    - ./Test/build/runTests --gtest_output="xml:Test/test-results.xml"  #run unit tests
   artifacts:
     reports:
       junit: Test/test-results.xml
@@ -62,13 +39,14 @@ commit:
     - git config --global user.email "devops@uprev.com"
     - git config --global user.name "gitlab CI"
   script:
-    - git submodule foreach git pull origin master  
+    - git submodule foreach git pull origin master  #we have to do this again because we are in a different job. need to find a way to keep workspace..
+    - mrt-doc -d doc -c 
     - | 
       CHANGES=$(git status --porcelain | wc -l)
       if [[ "${CHANGES}" -gt 0 ]]; then
-        echo "Committing updated files to git"
+        echo "Updating Module heads"
         git add executions.txt
-        git commit -m "Updated executions with new running date"
+        git commit -m "Module Heads updated in gitlab pipeline"
         git push "https://${GITLAB_USER_NAME}:${CI_ACCESS_TOKEN}@${CI_REPOSITORY_URL#*@}" "HEAD:${CI_COMMIT_REF_NAME}" -o skip-ci
       else
         echo "Nothing to commit"
