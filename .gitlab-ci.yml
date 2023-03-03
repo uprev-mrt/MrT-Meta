@@ -14,7 +14,7 @@ stages:          # List of stages for jobs, and their order of execution
 # Gathers all of the submodules and moves submodule head to head of master
 # - This is because submodules might get updates in other projects, and we want those reflected in the nightly test 
 #
-gather-job:
+gather:
   stage: gather
   tags: [mrt]
   script: 
@@ -24,7 +24,7 @@ gather-job:
 #
 # Build the GTest Unit test
 #
-build-job:       # This job runs in the build stage, which runs first.
+build:       # This job runs in the build stage, which runs first.
   stage: build
   tags: [mrt]   
   script:
@@ -40,7 +40,7 @@ build-job:       # This job runs in the build stage, which runs first.
 #
 # Run unit test and publish results
 #
-unit-test-job:   # This job runs in the test stage.
+unit-test:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
   tags: [mrt]
   script:
@@ -54,13 +54,15 @@ unit-test-job:   # This job runs in the test stage.
 # - This will trigger the docs to rebuild at mrt.readthedocs.io
 #
 
-commit-job:
+commit:
   tags: [mrt]
+  needs: [unit-test]
   stage: commit
   before_script:
     - git config --global user.email "devops@uprev.com"
     - git config --global user.name "gitlab CI"
   script:
+    - git submodule foreach git pull origin master  
     - | 
       CHANGES=$(git status --porcelain | wc -l)
       if [[ "${CHANGES}" -gt 0 ]]; then
