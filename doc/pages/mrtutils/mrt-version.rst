@@ -90,7 +90,8 @@ In this example ``patch`` is incremented by 1, and then the commit is tagged in 
     VERSION_STR=$(mrt-version main/version.h --patch +1 )  
     git tag -a $VERSION_STR -m "Adding Version Tag"
 
-.. note:: output format is vMajor.Minor.Patch. use the --full argument if you want the build number included in the output. 
+
+By default the output format is `Majon.Minor.Patch`, but it can be customized with the `--format` flag. It uses simple string substition and the available variables are `$MAJOR`, `$MINOR`, `$PATCH`, `$BUILD` , `$BRANCH`, and `$HASH`.
 
 
 Future Improvements
