@@ -2,19 +2,19 @@ name: test
 on: push
 
 jobs:
-  node-docker:
+  Module-Unit-Test:
     runs-on: self-hosted
     container:
       image: uprev/mrt
     steps:
-         - name: Log the node version
+         - name: Build and run
            run: |
               git submodule foreach git pull origin master
               mkdir Test/build
               cd Test/build
               cmake ..
               make
-              ./Test/build/runTests --gtest_output="xml:Test/test-results.xml"  #run unit tests
+              ./Test/build/runTests --gtest_output="xml:Test/test-results.xml" 
          - name: 'Upload Artifact'
            uses: actions/upload-artifact@v3
            with:
