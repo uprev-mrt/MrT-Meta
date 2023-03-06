@@ -1,0 +1,23 @@
+name: container
+on: push
+
+jobs:
+  node-docker:
+    runs-on: ubuntu-latest
+    container:
+      image: uprev/mrt
+    steps:
+         - name: Log the node version
+           run: |
+              git submodule foreach git pull origin master
+              mkdir Test/build
+              cd Test/build
+              cmake ..
+              make
+              ./Test/build/runTests --gtest_output="xml:Test/test-results.xml"  #run unit tests
+         - name: 'Upload Artifact'
+           uses: actions/upload-artifact@v3
+           with:
+            name: test-result
+            path: Test/test-results.xml
+            retention-days: 5
